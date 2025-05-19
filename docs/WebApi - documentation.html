@@ -1,0 +1,1163 @@
+<!DOCTYPE html>
+<!-- saved from url=(0014)about:internet -->
+<html class="writer-html5" lang="en" data-content_root="../"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta name="readthedocs-addons-api-version" content="1"><meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PRJ16 WebAPI — PRJ16 4.9.5 documentation</title>
+      <style type="text/css">:root, :host {
+  --fa-font-solid: normal 900 1em/1 "Font Awesome 6 Free";
+  --fa-font-regular: normal 400 1em/1 "Font Awesome 6 Free";
+  --fa-font-light: normal 300 1em/1 "Font Awesome 6 Pro";
+  --fa-font-thin: normal 100 1em/1 "Font Awesome 6 Pro";
+  --fa-font-duotone: normal 900 1em/1 "Font Awesome 6 Duotone";
+  --fa-font-duotone-regular: normal 400 1em/1 "Font Awesome 6 Duotone";
+  --fa-font-duotone-light: normal 300 1em/1 "Font Awesome 6 Duotone";
+  --fa-font-duotone-thin: normal 100 1em/1 "Font Awesome 6 Duotone";
+  --fa-font-brands: normal 400 1em/1 "Font Awesome 6 Brands";
+  --fa-font-sharp-solid: normal 900 1em/1 "Font Awesome 6 Sharp";
+  --fa-font-sharp-regular: normal 400 1em/1 "Font Awesome 6 Sharp";
+  --fa-font-sharp-light: normal 300 1em/1 "Font Awesome 6 Sharp";
+  --fa-font-sharp-thin: normal 100 1em/1 "Font Awesome 6 Sharp";
+  --fa-font-sharp-duotone-solid: normal 900 1em/1 "Font Awesome 6 Sharp Duotone";
+  --fa-font-sharp-duotone-regular: normal 400 1em/1 "Font Awesome 6 Sharp Duotone";
+  --fa-font-sharp-duotone-light: normal 300 1em/1 "Font Awesome 6 Sharp Duotone";
+  --fa-font-sharp-duotone-thin: normal 100 1em/1 "Font Awesome 6 Sharp Duotone";
+}
+
+svg:not(:root).svg-inline--fa, svg:not(:host).svg-inline--fa {
+  overflow: visible;
+  box-sizing: content-box;
+}
+
+.svg-inline--fa {
+  display: var(--fa-display, inline-block);
+  height: 1em;
+  overflow: visible;
+  vertical-align: -0.125em;
+}
+.svg-inline--fa.fa-2xs {
+  vertical-align: 0.1em;
+}
+.svg-inline--fa.fa-xs {
+  vertical-align: 0em;
+}
+.svg-inline--fa.fa-sm {
+  vertical-align: -0.0714285705em;
+}
+.svg-inline--fa.fa-lg {
+  vertical-align: -0.2em;
+}
+.svg-inline--fa.fa-xl {
+  vertical-align: -0.25em;
+}
+.svg-inline--fa.fa-2xl {
+  vertical-align: -0.3125em;
+}
+.svg-inline--fa.fa-pull-left {
+  margin-right: var(--fa-pull-margin, 0.3em);
+  width: auto;
+}
+.svg-inline--fa.fa-pull-right {
+  margin-left: var(--fa-pull-margin, 0.3em);
+  width: auto;
+}
+.svg-inline--fa.fa-li {
+  width: var(--fa-li-width, 2em);
+  top: 0.25em;
+}
+.svg-inline--fa.fa-fw {
+  width: var(--fa-fw-width, 1.25em);
+}
+
+.fa-layers svg.svg-inline--fa {
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.fa-layers-counter, .fa-layers-text {
+  display: inline-block;
+  position: absolute;
+  text-align: center;
+}
+
+.fa-layers {
+  display: inline-block;
+  height: 1em;
+  position: relative;
+  text-align: center;
+  vertical-align: -0.125em;
+  width: 1em;
+}
+.fa-layers svg.svg-inline--fa {
+  transform-origin: center center;
+}
+
+.fa-layers-text {
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  transform-origin: center center;
+}
+
+.fa-layers-counter {
+  background-color: var(--fa-counter-background-color, #ff253a);
+  border-radius: var(--fa-counter-border-radius, 1em);
+  box-sizing: border-box;
+  color: var(--fa-inverse, #fff);
+  line-height: var(--fa-counter-line-height, 1);
+  max-width: var(--fa-counter-max-width, 5em);
+  min-width: var(--fa-counter-min-width, 1.5em);
+  overflow: hidden;
+  padding: var(--fa-counter-padding, 0.25em 0.5em);
+  right: var(--fa-right, 0);
+  text-overflow: ellipsis;
+  top: var(--fa-top, 0);
+  transform: scale(var(--fa-counter-scale, 0.25));
+  transform-origin: top right;
+}
+
+.fa-layers-bottom-right {
+  bottom: var(--fa-bottom, 0);
+  right: var(--fa-right, 0);
+  top: auto;
+  transform: scale(var(--fa-layers-scale, 0.25));
+  transform-origin: bottom right;
+}
+
+.fa-layers-bottom-left {
+  bottom: var(--fa-bottom, 0);
+  left: var(--fa-left, 0);
+  right: auto;
+  top: auto;
+  transform: scale(var(--fa-layers-scale, 0.25));
+  transform-origin: bottom left;
+}
+
+.fa-layers-top-right {
+  top: var(--fa-top, 0);
+  right: var(--fa-right, 0);
+  transform: scale(var(--fa-layers-scale, 0.25));
+  transform-origin: top right;
+}
+
+.fa-layers-top-left {
+  left: var(--fa-left, 0);
+  right: auto;
+  top: var(--fa-top, 0);
+  transform: scale(var(--fa-layers-scale, 0.25));
+  transform-origin: top left;
+}
+
+.fa-1x {
+  font-size: 1em;
+}
+
+.fa-2x {
+  font-size: 2em;
+}
+
+.fa-3x {
+  font-size: 3em;
+}
+
+.fa-4x {
+  font-size: 4em;
+}
+
+.fa-5x {
+  font-size: 5em;
+}
+
+.fa-6x {
+  font-size: 6em;
+}
+
+.fa-7x {
+  font-size: 7em;
+}
+
+.fa-8x {
+  font-size: 8em;
+}
+
+.fa-9x {
+  font-size: 9em;
+}
+
+.fa-10x {
+  font-size: 10em;
+}
+
+.fa-2xs {
+  font-size: 0.625em;
+  line-height: 0.1em;
+  vertical-align: 0.225em;
+}
+
+.fa-xs {
+  font-size: 0.75em;
+  line-height: 0.0833333337em;
+  vertical-align: 0.125em;
+}
+
+.fa-sm {
+  font-size: 0.875em;
+  line-height: 0.0714285718em;
+  vertical-align: 0.0535714295em;
+}
+
+.fa-lg {
+  font-size: 1.25em;
+  line-height: 0.05em;
+  vertical-align: -0.075em;
+}
+
+.fa-xl {
+  font-size: 1.5em;
+  line-height: 0.0416666682em;
+  vertical-align: -0.125em;
+}
+
+.fa-2xl {
+  font-size: 2em;
+  line-height: 0.03125em;
+  vertical-align: -0.1875em;
+}
+
+.fa-fw {
+  text-align: center;
+  width: 1.25em;
+}
+
+.fa-ul {
+  list-style-type: none;
+  margin-left: var(--fa-li-margin, 2.5em);
+  padding-left: 0;
+}
+.fa-ul > li {
+  position: relative;
+}
+
+.fa-li {
+  left: calc(-1 * var(--fa-li-width, 2em));
+  position: absolute;
+  text-align: center;
+  width: var(--fa-li-width, 2em);
+  line-height: inherit;
+}
+
+.fa-border {
+  border-color: var(--fa-border-color, #eee);
+  border-radius: var(--fa-border-radius, 0.1em);
+  border-style: var(--fa-border-style, solid);
+  border-width: var(--fa-border-width, 0.08em);
+  padding: var(--fa-border-padding, 0.2em 0.25em 0.15em);
+}
+
+.fa-pull-left {
+  float: left;
+  margin-right: var(--fa-pull-margin, 0.3em);
+}
+
+.fa-pull-right {
+  float: right;
+  margin-left: var(--fa-pull-margin, 0.3em);
+}
+
+.fa-beat {
+  animation-name: fa-beat;
+  animation-delay: var(--fa-animation-delay, 0s);
+  animation-direction: var(--fa-animation-direction, normal);
+  animation-duration: var(--fa-animation-duration, 1s);
+  animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+  animation-timing-function: var(--fa-animation-timing, ease-in-out);
+}
+
+.fa-bounce {
+  animation-name: fa-bounce;
+  animation-delay: var(--fa-animation-delay, 0s);
+  animation-direction: var(--fa-animation-direction, normal);
+  animation-duration: var(--fa-animation-duration, 1s);
+  animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+  animation-timing-function: var(--fa-animation-timing, cubic-bezier(0.28, 0.84, 0.42, 1));
+}
+
+.fa-fade {
+  animation-name: fa-fade;
+  animation-delay: var(--fa-animation-delay, 0s);
+  animation-direction: var(--fa-animation-direction, normal);
+  animation-duration: var(--fa-animation-duration, 1s);
+  animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+  animation-timing-function: var(--fa-animation-timing, cubic-bezier(0.4, 0, 0.6, 1));
+}
+
+.fa-beat-fade {
+  animation-name: fa-beat-fade;
+  animation-delay: var(--fa-animation-delay, 0s);
+  animation-direction: var(--fa-animation-direction, normal);
+  animation-duration: var(--fa-animation-duration, 1s);
+  animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+  animation-timing-function: var(--fa-animation-timing, cubic-bezier(0.4, 0, 0.6, 1));
+}
+
+.fa-flip {
+  animation-name: fa-flip;
+  animation-delay: var(--fa-animation-delay, 0s);
+  animation-direction: var(--fa-animation-direction, normal);
+  animation-duration: var(--fa-animation-duration, 1s);
+  animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+  animation-timing-function: var(--fa-animation-timing, ease-in-out);
+}
+
+.fa-shake {
+  animation-name: fa-shake;
+  animation-delay: var(--fa-animation-delay, 0s);
+  animation-direction: var(--fa-animation-direction, normal);
+  animation-duration: var(--fa-animation-duration, 1s);
+  animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+  animation-timing-function: var(--fa-animation-timing, linear);
+}
+
+.fa-spin {
+  animation-name: fa-spin;
+  animation-delay: var(--fa-animation-delay, 0s);
+  animation-direction: var(--fa-animation-direction, normal);
+  animation-duration: var(--fa-animation-duration, 2s);
+  animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+  animation-timing-function: var(--fa-animation-timing, linear);
+}
+
+.fa-spin-reverse {
+  --fa-animation-direction: reverse;
+}
+
+.fa-pulse,
+.fa-spin-pulse {
+  animation-name: fa-spin;
+  animation-direction: var(--fa-animation-direction, normal);
+  animation-duration: var(--fa-animation-duration, 1s);
+  animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+  animation-timing-function: var(--fa-animation-timing, steps(8));
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .fa-beat,
+.fa-bounce,
+.fa-fade,
+.fa-beat-fade,
+.fa-flip,
+.fa-pulse,
+.fa-shake,
+.fa-spin,
+.fa-spin-pulse {
+    animation-delay: -1ms;
+    animation-duration: 1ms;
+    animation-iteration-count: 1;
+    transition-delay: 0s;
+    transition-duration: 0s;
+  }
+}
+@keyframes fa-beat {
+  0%, 90% {
+    transform: scale(1);
+  }
+  45% {
+    transform: scale(var(--fa-beat-scale, 1.25));
+  }
+}
+@keyframes fa-bounce {
+  0% {
+    transform: scale(1, 1) translateY(0);
+  }
+  10% {
+    transform: scale(var(--fa-bounce-start-scale-x, 1.1), var(--fa-bounce-start-scale-y, 0.9)) translateY(0);
+  }
+  30% {
+    transform: scale(var(--fa-bounce-jump-scale-x, 0.9), var(--fa-bounce-jump-scale-y, 1.1)) translateY(var(--fa-bounce-height, -0.5em));
+  }
+  50% {
+    transform: scale(var(--fa-bounce-land-scale-x, 1.05), var(--fa-bounce-land-scale-y, 0.95)) translateY(0);
+  }
+  57% {
+    transform: scale(1, 1) translateY(var(--fa-bounce-rebound, -0.125em));
+  }
+  64% {
+    transform: scale(1, 1) translateY(0);
+  }
+  100% {
+    transform: scale(1, 1) translateY(0);
+  }
+}
+@keyframes fa-fade {
+  50% {
+    opacity: var(--fa-fade-opacity, 0.4);
+  }
+}
+@keyframes fa-beat-fade {
+  0%, 100% {
+    opacity: var(--fa-beat-fade-opacity, 0.4);
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(var(--fa-beat-fade-scale, 1.125));
+  }
+}
+@keyframes fa-flip {
+  50% {
+    transform: rotate3d(var(--fa-flip-x, 0), var(--fa-flip-y, 1), var(--fa-flip-z, 0), var(--fa-flip-angle, -180deg));
+  }
+}
+@keyframes fa-shake {
+  0% {
+    transform: rotate(-15deg);
+  }
+  4% {
+    transform: rotate(15deg);
+  }
+  8%, 24% {
+    transform: rotate(-18deg);
+  }
+  12%, 28% {
+    transform: rotate(18deg);
+  }
+  16% {
+    transform: rotate(-22deg);
+  }
+  20% {
+    transform: rotate(22deg);
+  }
+  32% {
+    transform: rotate(-12deg);
+  }
+  36% {
+    transform: rotate(12deg);
+  }
+  40%, 100% {
+    transform: rotate(0deg);
+  }
+}
+@keyframes fa-spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.fa-rotate-90 {
+  transform: rotate(90deg);
+}
+
+.fa-rotate-180 {
+  transform: rotate(180deg);
+}
+
+.fa-rotate-270 {
+  transform: rotate(270deg);
+}
+
+.fa-flip-horizontal {
+  transform: scale(-1, 1);
+}
+
+.fa-flip-vertical {
+  transform: scale(1, -1);
+}
+
+.fa-flip-both,
+.fa-flip-horizontal.fa-flip-vertical {
+  transform: scale(-1, -1);
+}
+
+.fa-rotate-by {
+  transform: rotate(var(--fa-rotate-angle, 0));
+}
+
+.fa-stack {
+  display: inline-block;
+  vertical-align: middle;
+  height: 2em;
+  position: relative;
+  width: 2.5em;
+}
+
+.fa-stack-1x,
+.fa-stack-2x {
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: var(--fa-stack-z-index, auto);
+}
+
+.svg-inline--fa.fa-stack-1x {
+  height: 1em;
+  width: 1.25em;
+}
+.svg-inline--fa.fa-stack-2x {
+  height: 2em;
+  width: 2.5em;
+}
+
+.fa-inverse {
+  color: var(--fa-inverse, #fff);
+}
+
+.sr-only,
+.fa-sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+.sr-only-focusable:not(:focus),
+.fa-sr-only-focusable:not(:focus) {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+.svg-inline--fa .fa-primary {
+  fill: var(--fa-primary-color, currentColor);
+  opacity: var(--fa-primary-opacity, 1);
+}
+
+.svg-inline--fa .fa-secondary {
+  fill: var(--fa-secondary-color, currentColor);
+  opacity: var(--fa-secondary-opacity, 0.4);
+}
+
+.svg-inline--fa.fa-swap-opacity .fa-primary {
+  opacity: var(--fa-secondary-opacity, 0.4);
+}
+
+.svg-inline--fa.fa-swap-opacity .fa-secondary {
+  opacity: var(--fa-primary-opacity, 1);
+}
+
+.svg-inline--fa mask .fa-primary,
+.svg-inline--fa mask .fa-secondary {
+  fill: black;
+}</style><link rel="stylesheet" type="text/css" href="./VY WebApi - documentation_files/pygments.css">
+      <link rel="stylesheet" type="text/css" href="./VY WebApi - documentation_files/theme.css">
+      <link rel="stylesheet" type="text/css" href="./VY WebApi - documentation_files/theme_overrides.css">
+
+  
+    <link rel="canonical" href="https://docs.PRJ16.io/en/latest/developer/webapi.html">
+      <script src="./VY WebApi - documentation_files/jquery.js.download"></script>
+      <script src="./VY WebApi - documentation_files/_sphinx_javascript_frameworks_compat.js.download"></script>
+      <script src="./VY WebApi - documentation_files/documentation_options.js.download"></script>
+      <script src="./VY WebApi - documentation_files/doctools.js.download"></script>
+      <script src="./VY WebApi - documentation_files/sphinx_highlight.js.download"></script>
+    <script src="./VY WebApi - documentation_files/theme.js.download"></script>
+    <script src="./VY WebApi - documentation_files/versions.js.download"></script>
+    <link rel="index" title="Index" href="https://docs.PRJ16.io/en/latest/genindex.html">
+    <link rel="search" title="Search" href="https://docs.PRJ16.io/en/latest/search.html">
+    <link rel="prev" title="PRJ16 Developer Manual" href="https://docs.PRJ16.io/en/latest/developer/index.html"> 
+<script async="" type="text/javascript" src="./VY WebApi - documentation_files/readthedocs-addons.js.download"></script><meta name="readthedocs-project-slug" content="PRJ16"><meta name="readthedocs-version-slug" content="latest"><meta name="readthedocs-resolver-filename" content="/developer/webapi.html"><meta name="readthedocs-http-status" content="200"></head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+
+          
+          
+          <a href="https://docs.PRJ16.io/en/latest/index.html" class="icon icon-home">
+            PRJ16
+          </a>
+              <div class="switch-menus">
+                <div class="version-switch">
+    <select>
+      
+        <option value="latest" selected="selected" data-url="https://docs.PRJ16.io/en/latest/">
+              latest
+          </option>
+    </select>
+  </div>
+                <div class="language-switch">
+      <select>
+        
+              <option value="eu" data-url="https://docs.PRJ16.io/eu/latest/">
+                  Basque
+              </option>
+
+              <option value="cs" data-url="https://docs.PRJ16.io/cs/latest/">
+                  Czech
+              </option>
+
+              <option value="nl" data-url="https://docs.PRJ16.io/nl/latest/">
+                  Dutch
+              </option>
+
+              <option value="en" selected="selected" data-url="https://docs.PRJ16.io/en/latest/">
+                  English
+              </option>
+
+              <option value="et" data-url="https://docs.PRJ16.io/et/latest/">
+                  Estonian
+              </option>
+
+              <option value="fr" data-url="https://docs.PRJ16.io/fr/latest/">
+                  French
+              </option>
+
+              <option value="de" data-url="https://docs.PRJ16.io/de/latest/">
+                  German
+              </option>
+
+              <option value="hu" data-url="https://docs.PRJ16.io/hu/latest/">
+                  Hungarian
+              </option>
+
+              <option value="it" data-url="https://docs.PRJ16.io/it/latest/">
+                  Italian
+              </option>
+
+              <option value="lt" data-url="https://docs.PRJ16.io/lt/latest/">
+                  Lithuanian
+              </option>
+
+              <option value="pl" data-url="https://docs.PRJ16.io/pl/latest/">
+                  Polish
+              </option>
+
+              <option value="ru" data-url="https://docs.PRJ16.io/ru/latest/">
+                  Russian
+              </option>
+
+              <option value="sr" data-url="https://docs.PRJ16.io/sr/latest/">
+                  Serbian
+              </option>
+
+              <option value="zh-cn" data-url="https://docs.PRJ16.io/zh-cn/latest/">
+                  Simplified Chinese
+              </option>
+
+              <option value="sl" data-url="https://docs.PRJ16.io/sl/latest/">
+                  Slovenian
+              </option>
+
+              <option value="es" data-url="https://docs.PRJ16.io/es/latest/">
+                  Spanish
+              </option>
+
+              <option value="sv" data-url="https://docs.PRJ16.io/sv/latest/">
+                  Swedish
+              </option>
+
+              <option value="zh-tw" data-url="https://docs.PRJ16.io/zh-tw/latest/">
+                  Traditional Chinese
+              </option>
+
+              <option value="tr" data-url="https://docs.PRJ16.io/tr/latest/">
+                  Turkish
+              </option>
+
+              <option value="uk" data-url="https://docs.PRJ16.io/uk/latest/">
+                  Ukrainian
+              </option>
+       </select>
+    </div>
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="https://docs.PRJ16.io/en/latest/search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs">
+    <input type="hidden" name="check_keywords" value="yes">
+    <input type="hidden" name="area" value="default">
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current" aria-expanded="true">
+<li class="toctree-l1"><a class="reference internal" href="https://docs.PRJ16.io/en/latest/admin/index.html">PRJ16 Administrator Manual</a></li>
+<li class="toctree-l1"><a class="reference internal" href="https://docs.PRJ16.io/en/latest/user/index.html">PRJ16 User Manual</a></li>
+<li class="toctree-l1"><a class="reference internal" href="https://docs.PRJ16.io/en/latest/addons/index.html">PRJ16 Add-ons Integration Manual</a></li>
+<li class="toctree-l1 current" aria-expanded="true"><a class="reference internal" href="https://docs.PRJ16.io/en/latest/developer/index.html"><button class="toctree-expand" title="Open/close menu"></button>PRJ16 Developer Manual</a><ul class="" aria-expanded="false">
+<li class="toctree-l2 current" aria-expanded="true"><a class="reference internal current" href="https://docs.PRJ16.io/en/latest/developer/webapi.html#" aria-expanded="true"><button class="toctree-expand" title="Open/close menu"></button>PRJ16 WebAPI</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="https://docs.PRJ16.io/en/latest/developer/webapi.html#general">General</a></li>
+<li class="toctree-l3"><a class="reference internal" href="https://docs.PRJ16.io/en/latest/developer/webapi.html#connection-management-authentication"><button class="toctree-expand" title="Open/close menu"></button>Connection management &amp; authentication</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="https://docs.PRJ16.io/en/latest/developer/webapi.html#authentication-methods">Authentication methods</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="https://docs.PRJ16.io/en/latest/developer/webapi.html#framebuffer">Framebuffer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="https://docs.PRJ16.io/en/latest/developer/webapi.html#feature-control"><button class="toctree-expand" title="Open/close menu"></button>Feature control</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="https://docs.PRJ16.io/en/latest/developer/webapi.html#available-features">Available features</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="https://docs.PRJ16.io/en/latest/developer/webapi.html#user-information">User information</a></li>
+<li class="toctree-l3"><a class="reference internal" href="https://docs.PRJ16.io/en/latest/developer/webapi.html#session-information">Session information</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="https://docs.PRJ16.io/en/latest/index.html">PRJ16</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="https://docs.PRJ16.io/en/latest/index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="https://docs.PRJ16.io/en/latest/developer/index.html">PRJ16 Developer Manual</a></li>
+      <li class="breadcrumb-item active">PRJ16 WebAPI</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="https://docs.PRJ16.io/en/latest/_sources/developer/webapi.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="PRJ16-webapi">
+<h1>PRJ16 WebAPI<a class="headerlink" href="https://docs.PRJ16.io/en/latest/developer/webapi.html#PRJ16-webapi" title="Link to this heading"></a></h1>
+<p>PRJ16 4.5 and newer feature a new WebAPI plugin. This plugin offers a RESTful API for accessing PRJ16 Server instances via HTTP. There are two possible usage scenarios:</p>
+<ul class="simple">
+<li><p>Local: WebAPI server on each computer running along with the PRJ16 Server and thus connects to <code class="docutils literal notranslate"><span class="pre">localhost</span></code></p></li>
+<li><p>Proxy: WebAPI server on a server node, acting as a proxy by connecting to the requested hosts</p></li>
+</ul>
+<p>While running the WebAPI server locally can be beneficial in terms of performance, it requires the deployment of individual SSL certificates on all computers.</p>
+<p>The WebAPI plugins also offers a CLI module, so the WebAPI server can be run standalone easily via <code class="docutils literal notranslate"><span class="pre">PRJ16-cli</span> <span class="pre">webapi</span> <span class="pre">runserver</span></code>.</p>
+<p>The following sections describe all supported API calls.</p>
+<section id="general">
+<h2>General<a class="headerlink" href="https://docs.PRJ16.io/en/latest/developer/webapi.html#general" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>When a call succeeds, the indicated responses can be expected with HTTP status code 200.</p></li>
+<li><p>Any errors will be indicated through a corresponding (non-unambiguous) HTTP status codes and an additional error object in the response body, e.g. <code class="docutils literal notranslate"><span class="pre">{"error":{"code":6,"message":"Authentication</span> <span class="pre">failed"}}</span></code></p></li>
+</ul>
+<div class="wy-table-responsive"><table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Error</p></th>
+<th class="head"><p>Error code</p></th>
+<th class="head"><p>HTTP status code</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>NoError</p></td>
+<td><p>0</p></td>
+<td><p>200 (OK)</p></td>
+</tr>
+<tr class="row-odd"><td><p>InvalidData</p></td>
+<td><p>1</p></td>
+<td><p>400 (BadRequest)</p></td>
+</tr>
+<tr class="row-even"><td><p>InvalidConnection</p></td>
+<td><p>2</p></td>
+<td><p>401 (Unauthorized)</p></td>
+</tr>
+<tr class="row-odd"><td><p>InvalidFeature</p></td>
+<td><p>3</p></td>
+<td><p>400 (BadRequest)</p></td>
+</tr>
+<tr class="row-even"><td><p>InvalidCredentials</p></td>
+<td><p>4</p></td>
+<td><p>400 (BadRequest)</p></td>
+</tr>
+<tr class="row-odd"><td><p>AuthenticationMethodNotAvailable</p></td>
+<td><p>5</p></td>
+<td><p>400 (BadRequest)</p></td>
+</tr>
+<tr class="row-even"><td><p>AuthenticationFailed</p></td>
+<td><p>6</p></td>
+<td><p>401 (Unauthorized)</p></td>
+</tr>
+<tr class="row-odd"><td><p>ConnectionLimitReached</p></td>
+<td><p>7</p></td>
+<td><p>429 (TooManyRequests)</p></td>
+</tr>
+<tr class="row-even"><td><p>ConnectionTimedOut</p></td>
+<td><p>8</p></td>
+<td><p>408 (RequestTimeout)</p></td>
+</tr>
+<tr class="row-odd"><td><p>UnsupportedImageFormat</p></td>
+<td><p>9</p></td>
+<td><p>503 (ServiceUnavailable)</p></td>
+</tr>
+<tr class="row-even"><td><p>FramebufferNotAvailable</p></td>
+<td><p>10</p></td>
+<td><p>503 (ServiceUnavailable)</p></td>
+</tr>
+<tr class="row-odd"><td><p>FramebufferEncodingError</p></td>
+<td><p>11</p></td>
+<td><p>500 (InternalServerError)</p></td>
+</tr>
+<tr class="row-even"><td><p>ProtocolMismatch</p></td>
+<td><p>12</p></td>
+<td><p>501 (NotImplemented)</p></td>
+</tr>
+</tbody>
+</table></div>
+</section>
+<section id="connection-management-authentication">
+<h2>Connection management &amp; authentication<a class="headerlink" href="https://docs.PRJ16.io/en/latest/developer/webapi.html#connection-management-authentication" title="Link to this heading"></a></h2>
+<p class="rubric">General</p>
+<ul class="simple">
+<li><p>Idle (inactive) connections are closed automatically after 60 s per default (configurable through the WebAPI/ConnectionIdleTimeout setting)</p></li>
+<li><p>Unauthenticated connections are closed automatically after 15 s per default (configurable through the WebAPI/ConnectionAuthenticationTimeout setting)</p></li>
+<li><p>Authenticated connections have a limited lifetime and are closed automatically after 3 hours per default (configurable through the WebAPI/ConnectionLifetime setting)</p></li>
+</ul>
+<p class="rubric">Get authentication methods supported by host</p>
+<ul class="simple">
+<li><p>URL: /api/v1/authentication/&lt;HOST&gt;</p></li>
+<li><p>Method: <strong>GET</strong></p></li>
+<li><p>Response: <code class="docutils literal notranslate"><span class="pre">{</span> <span class="pre">"methods":</span> <span class="pre">[</span> <span class="pre">"&lt;UUID1&gt;",</span> <span class="pre">"&lt;UUID2",</span> <span class="pre">...</span> <span class="pre">]</span> <span class="pre">}</span></code></p></li>
+</ul>
+<p class="rubric">Create new connection and perform authentication</p>
+<ul class="simple">
+<li><p>URL: /api/v1/authentication/&lt;HOST&gt;</p></li>
+<li><p>Method: <strong>POST</strong></p></li>
+<li><p>Data: <code class="docutils literal notranslate"><span class="pre">{</span> <span class="pre">"method":</span> <span class="pre">"&lt;AUTH-METHOD-UUID&gt;",</span> <span class="pre">"credentials":</span> <span class="pre">&lt;METHOD-SPECIFIC-CREDENTIALS&gt;</span> <span class="pre">}</span></code></p></li>
+<li><p>Response: <code class="docutils literal notranslate"><span class="pre">{</span> <span class="pre">"connection-uid":</span> <span class="pre">"&lt;CONNECTION-UID&gt;",</span> <span class="pre">"validUntil":</span> <span class="pre">&lt;UTC-TIMESTAMP&gt;</span> <span class="pre">}</span></code></p></li>
+<li><p>The returned connection UUID identifies a single connection to a host and needs to be passed in the <code class="docutils literal notranslate"><span class="pre">Connection-Uid</span></code> header field in all subsequent API calls</p></li>
+<li><p>The connection’s lifetime ends at the time specified in the <code class="docutils literal notranslate"><span class="pre">validUntil</span></code> field</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;HOST&gt;</span></code> should be <code class="docutils literal notranslate"><span class="pre">localhost</span></code> when connecting to WebAPI servers running on target computers</p></li>
+</ul>
+<p class="rubric">Close connection</p>
+<ul class="simple">
+<li><p>URL: /api/v1/authentication/&lt;HOST&gt;</p></li>
+<li><p>Method: <strong>DELETE</strong></p></li>
+<li><p>Headers: <code class="docutils literal notranslate"><span class="pre">{</span> <span class="pre">Connection-Uid:</span> <span class="pre">&lt;CONNECTION-UID&gt;</span> <span class="pre">}</span></code></p></li>
+<li><p>Response: <code class="docutils literal notranslate"><span class="pre">{</span> <span class="pre">}</span></code></p></li>
+</ul>
+<section id="authentication-methods">
+<h3>Authentication methods<a class="headerlink" href="https://docs.PRJ16.io/en/latest/developer/webapi.html#authentication-methods" title="Link to this heading"></a></h3>
+<div class="wy-table-responsive"><table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Name</p></th>
+<th class="head"><p>UUID</p></th>
+<th class="head"><p>Credentials</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>AuthKeys</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">0c69b301-81b4-42d6-8fae-128cdd113314</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">{</span> <span class="pre">"keyname":</span> <span class="pre">"&lt;NAME&gt;"</span> <span class="pre">(e.g.</span> <span class="pre">"teacher"),</span> <span class="pre">"keydata":</span> <span class="pre">"&lt;PEM-ENCODED-PRIVATE-KEY&gt;"</span> <span class="pre">}</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p>AuthLDAP (PRJ16 &gt;= 5)</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">6f0a491e-c1c6-4338-8244-f823b0bf8670</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">{</span> <span class="pre">"username":</span> <span class="pre">"&lt;LDAP-USERNAME&gt;",</span> <span class="pre">"password":</span> <span class="pre">"&lt;LDAP-PASSWORD&gt;"</span> <span class="pre">}</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p>AuthLogon</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">63611f7c-b457-42c7-832e-67d0f9281085</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">{</span> <span class="pre">"username":</span> <span class="pre">"&lt;USERNAME&gt;",</span> <span class="pre">"password":</span> <span class="pre">"&lt;PASSWORD&gt;"</span> <span class="pre">}</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p>AuthSimple (PRJ16 &gt;= 5)</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">73430b14-ef69-4c75-a145-ba635d1cc676</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">{</span> <span class="pre">"password":</span> <span class="pre">"&lt;MASTER-PASSWORD&gt;"</span> <span class="pre">}</span></code></p></td>
+</tr>
+</tbody>
+</table></div>
+</section>
+</section>
+<section id="framebuffer">
+<h2>Framebuffer<a class="headerlink" href="https://docs.PRJ16.io/en/latest/developer/webapi.html#framebuffer" title="Link to this heading"></a></h2>
+<p class="rubric">Get current framebuffer image</p>
+<ul class="simple">
+<li><p>URL: /api/v1/framebuffer?format=[png|jpeg]&amp;compression=[1-9]&amp;quality=[1-100]&amp;width=NNNN&amp;height=NNNN</p></li>
+<li><p>Method: <strong>GET</strong></p></li>
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">format</span></code></dt><dd><ul>
+<li><p>Optional</p></li>
+<li><p>Defaults to <code class="docutils literal notranslate"><span class="pre">png</span></code></p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">compression</span></code></dt><dd><ul>
+<li><p>Optional</p></li>
+<li><p>Used for the PNG format only</p></li>
+<li><p>default=5</p></li>
+<li><p>1=no compression, 9=highest compression</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">quality</span></code></dt><dd><ul>
+<li><p>Optional</p></li>
+<li><p>Used for the JPEG format only</p></li>
+<li><p>default=75</p></li>
+<li><p>1=lowest quality, 100=highest quality</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">width</span></code>/<code class="docutils literal notranslate"><span class="pre">height</span></code></dt><dd><ul>
+<li><p>Optional</p></li>
+<li><p>If none of both is not specified, the original framebuffer image will be returned</p></li>
+<li><p>If either one is specified, the corresponding counterpart will be calculated automatically while keeping the aspect ratio</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p>Response: <code class="docutils literal notranslate"><span class="pre">&lt;IMAGE-DATA&gt;</span></code></p></li>
+</ul>
+</section>
+<section id="feature-control">
+<h2>Feature control<a class="headerlink" href="https://docs.PRJ16.io/en/latest/developer/webapi.html#feature-control" title="Link to this heading"></a></h2>
+<p class="rubric">Get available features</p>
+<ul class="simple">
+<li><p>URL: /api/v1/feature</p></li>
+<li><p>Method: <strong>GET</strong></p></li>
+<li><p>Headers: <code class="docutils literal notranslate"><span class="pre">{</span> <span class="pre">Connection-Uid:</span> <span class="pre">&lt;CONNECTION-UID&gt;</span> <span class="pre">}</span></code></p></li>
+<li><p>Response: <code class="docutils literal notranslate"><span class="pre">[</span> <span class="pre">&lt;FEATURE</span> <span class="pre">OBJECTS&gt;</span> <span class="pre">]</span></code></p></li>
+</ul>
+<p class="rubric">Start or stop feature</p>
+<ul class="simple">
+<li><p>URL: /api/v1/feature/&lt;FEATURE-UID&gt;</p></li>
+<li><p>Method: <strong>PUT</strong></p></li>
+<li><p>Data: <code class="docutils literal notranslate"><span class="pre">{</span> <span class="pre">"active":</span> <span class="pre">[true/false],</span> <span class="pre">"arguments":</span> <span class="pre">&lt;ARGUMENTS&gt;</span> <span class="pre">}</span></code></p></li>
+<li><p>Arguments are feature specific and described in the feature table below</p></li>
+<li><p>Headers: <code class="docutils literal notranslate"><span class="pre">{</span> <span class="pre">Connection-Uid:</span> <span class="pre">&lt;CONNECTION-UID&gt;</span> <span class="pre">}</span></code></p></li>
+<li><p>Response: <code class="docutils literal notranslate"><span class="pre">{</span> <span class="pre">}</span></code></p></li>
+</ul>
+<p class="rubric">Query feature status</p>
+<ul class="simple">
+<li><p>URL: /api/v1/feature/&lt;FEATURE-UID&gt;</p></li>
+<li><p>Method: <strong>GET</strong></p></li>
+<li><p>Headers: <code class="docutils literal notranslate"><span class="pre">{</span> <span class="pre">Connection-Uid:</span> <span class="pre">&lt;CONNECTION-UID&gt;</span> <span class="pre">}</span></code></p></li>
+<li><p>Response: <code class="docutils literal notranslate"><span class="pre">{</span> <span class="pre">"active":</span> <span class="pre">[true/false]</span> <span class="pre">}</span></code></p></li>
+<li><p>Only applies to features implementing a certain mode such as ScreenLock. All features implementing simple actions will never be reported as active.</p></li>
+</ul>
+<section id="available-features">
+<h3>Available features<a class="headerlink" href="https://docs.PRJ16.io/en/latest/developer/webapi.html#available-features" title="Link to this heading"></a></h3>
+<div class="wy-table-responsive"><table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Name</p></th>
+<th class="head"><p>UUID</p></th>
+<th class="head"><p>Arguments</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>ScreenLock</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">ccb535a2-1d24-4cc1-a709-8b47d2b2ac79</span></code></p></td>
+<td><p>&lt;none&gt;</p></td>
+</tr>
+<tr class="row-odd"><td><p>InputDevicesLock (PRJ16 &gt;= 4.5.0)</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">e4a77879-e544-4fec-bc18-e534f33b934c</span></code></p></td>
+<td><p>&lt;none&gt;</p></td>
+</tr>
+<tr class="row-even"><td><p>UserLogin</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">7310707d-3918-460d-a949-65bd152cb958</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">{</span> <span class="pre">"username":</span> <span class="pre">&lt;USERNAME&gt;,</span> <span class="pre">"password":</span> <span class="pre">&lt;PASSWORD&gt;</span> <span class="pre">}</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p>UserLogoff</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">7311d43d-ab53-439e-a03a-8cb25f7ed526</span></code></p></td>
+<td><p>&lt;none&gt;</p></td>
+</tr>
+<tr class="row-even"><td><p>Reboot</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">4f7d98f0-395a-4fff-b968-e49b8d0f748c</span></code></p></td>
+<td><p>&lt;none&gt;</p></td>
+</tr>
+<tr class="row-odd"><td><p>PowerDown</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">6f5a27a0-0e2f-496e-afcc-7aae62eede10</span></code></p></td>
+<td><p>&lt;none&gt;</p></td>
+</tr>
+<tr class="row-even"><td><p>DemoServer</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">e4b6e743-1f5b-491d-9364-e091086200f4</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">{</span> <span class="pre">"demoAccessToken":</span> <span class="pre">&lt;TOKEN&gt;</span> <span class="pre">}</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p>FullScreenDemoClient</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">7b6231bd-eb89-45d3-af32-f70663b2f878</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">{</span> <span class="pre">"demoAccessToken":</span> <span class="pre">&lt;TOKEN&gt;,</span> <span class="pre">"demoServerHost":</span> <span class="pre">&lt;DEMO-SERVER-HOST-ADDRESS&gt;</span> <span class="pre">}</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p>WindowDemoClient</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">ae45c3db-dc2e-4204-ae8b-374cdab8c62c</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">{</span> <span class="pre">"demoAccessToken":</span> <span class="pre">&lt;TOKEN&gt;,</span> <span class="pre">"demoServerHost":</span> <span class="pre">&lt;DEMO-SERVER-HOST-ADDRESS&gt;</span> <span class="pre">}</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p>StartApp</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">da9ca56a-b2ad-4fff-8f8a-929b2927b442</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">{</span> <span class="pre">"applications":</span> <span class="pre">["&lt;APP1-PATH-WITH-ARGUMENTS&gt;",</span> <span class="pre">"&lt;APP2-PATH-WITH-ARGUMENTS&gt;",</span> <span class="pre">...]</span> <span class="pre">}</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p>OpenWebsite</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">8a11a75d-b3db-48b6-b9cb-f8422ddd5b0c</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">{</span> <span class="pre">"websiteUrls":</span> <span class="pre">["&lt;URL1&gt;",</span> <span class="pre">"&lt;URL2&gt;",</span> <span class="pre">...]</span> <span class="pre">}</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p>TextMessage</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">e75ae9c8-ac17-4d00-8f0d-019348346208</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">{</span> <span class="pre">"text":</span> <span class="pre">"..."</span> <span class="pre">}</span></code></p></td>
+</tr>
+</tbody>
+</table></div>
+<ul class="simple">
+<li><p>A demo token is an arbitrary ASCII string (e.g. base64-encoded random data) with a recommended length of at least 16 bytes</p></li>
+</ul>
+</section>
+</section>
+<section id="user-information">
+<h2>User information<a class="headerlink" href="https://docs.PRJ16.io/en/latest/developer/webapi.html#user-information" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>URL: /api/v1/user</p></li>
+<li><p>Method: <strong>GET</strong></p></li>
+<li><p>Response: <code class="docutils literal notranslate"><span class="pre">{</span> <span class="pre">"login":</span> <span class="pre">"&lt;USER-LOGIN-NAME&gt;",</span> <span class="pre">"fullName",</span> <span class="pre">"&lt;FULL-NAME-OF-USER&gt;"</span> <span class="pre">}</span></code></p></li>
+<li><p>If no user is logged on, the <code class="docutils literal notranslate"><span class="pre">login</span></code> and <code class="docutils literal notranslate"><span class="pre">fullName</span></code> fields are empty</p></li>
+</ul>
+</section>
+<section id="session-information">
+<h2>Session information<a class="headerlink" href="https://docs.PRJ16.io/en/latest/developer/webapi.html#session-information" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>URL: /api/v1/session</p></li>
+<li><p>Method: <strong>GET</strong></p></li>
+<li><dl class="simple">
+<dt>Response: <code class="docutils literal notranslate"><span class="pre">{</span> <span class="pre">"sessionId":</span> <span class="pre">&lt;SESSION-ID&gt;,</span> <span class="pre">"sessionUptime",</span> <span class="pre">&lt;SESSION-UPTIME-IN-SECONDS&gt;,</span> <span class="pre">"sessionClientAddress":</span> <span class="pre">"&lt;ADDRESS-OF-SESSION-CLIENT&gt;",</span> <span class="pre">"sessionClientName":</span> <span class="pre">"&lt;SESSION-CLIENT-NAME&gt;",</span> <span class="pre">"sessionHostName":</span> <span class="pre">"&lt;NAME-OF-SESSION-HOST&gt;"</span> <span class="pre">}</span></code></dt><dd><ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">sessionId</span></code> - an integer representing the session ID assigned by the PRJ16 Service - to be used as offset to the server ports to access the corresponding session server</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sessionUptime</span></code> - the number of seconds that elapsed since the session has been opened (e.g. user logon time)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sessionClientAddress</span></code> - the host/IP address of the client which is connected to the session (e.g. the host running an RDP client)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sessionClientName</span></code> - the name the client which is connected to the session (e.g. the host running an RDP client)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sessionHostName</span></code> - the name of the host on which the session is running, usually the local hostname</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="https://docs.PRJ16.io/en/latest/developer/index.html" class="btn btn-neutral float-left" title="PRJ16 Developer Manual" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr>
+
+  <div role="contentinfo">
+    <p>© Copyright 2017-2025, PRJ16 Solutions.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org/">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+
+<readthedocs-flyout><template shadowrootmode="open"><!---->
+      <div class=" floating container bottom-right ">
+        <!--?lit$144989026$-->
+      <header>
+        <img class="logo" alt="Read the Docs" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+Cjxzdmc6c3ZnCiAgIHZlcnNpb249IjEuMSIKICAgaWQ9InN2ZyIKICAgeD0iMHB4IgogICB5PSIwcHgiCiAgIHZpZXdCb3g9IjY5NCAxOTcgMzQ2LjY5ODU1IDM5OS45ODQ3NyIKICAgc29kaXBvZGk6ZG9jbmFtZT0ibG9nby1saWdodC5zdmciCiAgIHdpZHRoPSIzNDYuNjk4NTUiCiAgIGhlaWdodD0iMzk5Ljk4NDc3IgogICBpbmtzY2FwZTp2ZXJzaW9uPSIxLjMuMiAoMDkxZTIwZWYwZiwgMjAyMy0xMS0yNSwgY3VzdG9tKSIKICAgeG1sbnM6aW5rc2NhcGU9Imh0dHA6Ly93d3cuaW5rc2NhcGUub3JnL25hbWVzcGFjZXMvaW5rc2NhcGUiCiAgIHhtbG5zOnNvZGlwb2RpPSJodHRwOi8vc29kaXBvZGkuc291cmNlZm9yZ2UubmV0L0RURC9zb2RpcG9kaS0wLmR0ZCIKICAgeG1sbnM6c3ZnPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CiAgPHN2ZzpkZWZzCiAgICAgaWQ9ImRlZnMxMiIgLz4KICA8c29kaXBvZGk6bmFtZWR2aWV3CiAgICAgaWQ9Im5hbWVkdmlldzEyIgogICAgIHBhZ2Vjb2xvcj0iI2ZmZmZmZiIKICAgICBib3JkZXJjb2xvcj0iIzAwMDAwMCIKICAgICBib3JkZXJvcGFjaXR5PSIwLjI1IgogICAgIGlua3NjYXBlOnNob3dwYWdlc2hhZG93PSIyIgogICAgIGlua3NjYXBlOnBhZ2VvcGFjaXR5PSIwLjAiCiAgICAgaW5rc2NhcGU6cGFnZWNoZWNrZXJib2FyZD0iMCIKICAgICBpbmtzY2FwZTpkZXNrY29sb3I9IiNkMWQxZDEiCiAgICAgaW5rc2NhcGU6em9vbT0iMS4yNTIiCiAgICAgaW5rc2NhcGU6Y3g9Ijk5OC40MDI1NiIKICAgICBpbmtzY2FwZTpjeT0iMTk5LjY4MDUxIgogICAgIGlua3NjYXBlOndpbmRvdy13aWR0aD0iMzQ0MCIKICAgICBpbmtzY2FwZTp3aW5kb3ctaGVpZ2h0PSIxMzg5IgogICAgIGlua3NjYXBlOndpbmRvdy14PSIwIgogICAgIGlua3NjYXBlOndpbmRvdy15PSIyNyIKICAgICBpbmtzY2FwZTp3aW5kb3ctbWF4aW1pemVkPSIxIgogICAgIGlua3NjYXBlOmN1cnJlbnQtbGF5ZXI9InN2ZyIgLz4KICA8c3ZnOmcKICAgICBpZD0ibG9nbyIKICAgICB0cmFuc2Zvcm09Im1hdHJpeCgwLjU1NzUzNjQ0LDAsMCwwLjU1NzUzNjQ0LDY2LjUzMTgxMiwxMDUwLjEyNjIpIj4KICAgIDxzdmc6cGF0aAogICAgICAgc3R5bGU9ImZpbGw6I2ZjZmNmYyIKICAgICAgIGQ9Im0gMTQwOC4xLC0xMTgxLjcgYyAtNy41LDEgLTEyLjcsNy44IC0xMS43LDE1LjMgMC43LDUuNCA0LjYsOS45IDkuOSwxMS4zIDAsMCAzMy4yLDExIDg5LjcsMTUuNiA0NS40LDMuNyA5Ni45LC0zLjIgOTYuOSwtMy4yIDcuNSwtMC4yIDEzLjUsLTYuNSAxMy4yLC0xNCAtMC4zLC03LjUgLTYuNSwtMTMuNSAtMTQsLTEzLjIgLTAuOSwwIC0xLjgsMC4xIC0yLjYsMC4zIDAsMCAtNTAuNCw2LjIgLTkxLjMsMi45IC01NCwtNC40IC04My40LC0xNC4zIC04My40LC0xNC4zIC0yLjIsLTAuNyAtNC41LC0xIC02LjcsLTAuNyB6IG0gMCwtNjcuNiBjIC03LjUsMSAtMTIuNyw3LjggLTExLjcsMTUuMyAwLjcsNS40IDQuNiw5LjkgOS45LDExLjMgMCwwIDMzLjIsMTEgODkuNywxNS42IDQ1LjQsMy43IDk2LjksLTMuMiA5Ni45LC0zLjIgNy41LC0wLjIgMTMuNSwtNi41IDEzLjIsLTE0IC0wLjMsLTcuNSAtNi41LC0xMy41IC0xNCwtMTMuMiAtMC45LDAgLTEuOCwwLjEgLTIuNiwwLjMgMCwwIC01MC40LDYuMiAtOTEuMywyLjkgLTU0LC00LjQgLTgzLjQsLTE0LjMgLTgzLjQsLTE0LjMgLTIuMiwtMC43IC00LjUsLTEgLTYuNywtMC43IHogbSAwLC02Ny42IGMgLTcuNSwxIC0xMi43LDcuOCAtMTEuNywxNS4zIDAuNyw1LjQgNC42LDkuOSA5LjksMTEuMyAwLDAgMzMuMiwxMSA4OS43LDE1LjYgNDUuNCwzLjcgOTYuOSwtMy4yIDk2LjksLTMuMiA3LjUsLTAuMiAxMy41LC02LjUgMTMuMiwtMTQgLTAuMywtNy41IC02LjUsLTEzLjUgLTE0LC0xMy4yIC0wLjksMCAtMS44LDAuMSAtMi42LDAuMyAwLDAgLTUwLjQsNi4yIC05MS4zLDIuOSAtNTQsLTQuNCAtODMuNCwtMTQuMyAtODMuNCwtMTQuMyAtMi4yLC0wLjcgLTQuNSwtMSAtNi43LC0wLjcgeiBtIDAsLTY3LjUgYyAtNy41LDEgLTEyLjcsNy44IC0xMS43LDE1LjMgMC43LDUuNCA0LjYsOS45IDkuOSwxMS4zIDAsMCAzMy4yLDExIDg5LjcsMTUuNiA0NS40LDMuNyA5Ni45LC0zLjIgOTYuOSwtMy4yIDcuNSwtMC4yIDEzLjUsLTYuNSAxMy4yLC0xNCAtMC4zLC03LjUgLTYuNSwtMTMuNSAtMTQsLTEzLjIgLTAuOSwwIC0xLjgsMC4xIC0yLjYsMC4zIDAsMCAtNTAuNCw2LjIgLTkxLjMsMi45IC01NCwtNC40IC04My40LC0xNC4zIC04My40LC0xNC4zIC0yLjIsLTAuOCAtNC41LC0xIC02LjcsLTAuNyB6IG0gLTk0LjcsLTcxLjMgYyAtNzEsMC41IC05Ny41LDIyLjMgLTk3LjUsMjIuMyB2IDUzMC4zIGMgMCwwIDI1LjgsLTIyLjMgMTA5LC0xOC45IDgzLjIsMy40IDEwMC4zLDMyLjYgMjAyLjUsMzQuNiAxMDIuMiwyLjEgMTI3LjksLTE1LjcgMTI3LjksLTE1LjcgbCAxLjUsLTU0MC42IGMgMCwwIC00NiwxMyAtMTM1LjUsMTMuNyAtODkuNSwwLjcgLTExMSwtMjIuOCAtMTkzLjIsLTI1LjUgLTUuMSwtMC4xIC0xMCwtMC4yIC0xNC43LC0wLjIgeiBtIDU5LjQsMzQuNiBjIDAsMCA0MywxNC4yIDEyMi41LDE4LjIgNjcuMiwzLjMgMTM0LjUsLTYuNiAxMzQuNSwtNi42IFYgLTkyOSBjIDAsMCAtMzQuMSwxNy45IC0xMTkuMywxMS44IC02NiwtNC43IC0xMzguNywtMjkuNyAtMTM4LjcsLTI5LjcgeiBtIC00MS41LDEyLjUgYyA3LjYsMCAxMy43LDYuMiAxMy43LDEzLjcgMCw3LjUgLTYuMiwxMy43IC0xMy43LDEzLjcgMCwwIC0yMi4zLDAuMSAtMzUuOCwxLjUgLTIyLjgsMi4zIC0zOC4zLDEwLjYgLTM4LjMsMTAuNiAtNi43LDMuNSAtMTUsMSAtMTguNSwtNS43IC0zLjUsLTYuNyAtMSwtMTUgNS43LC0xOC41IDAsMCAwLDAgMCwwIDAsMCAyMC4yLC0xMC43IDQ4LjQsLTEzLjUgMTYuMywtMS43IDM4LjUsLTEuOCAzOC41LC0xLjggeiBtIC0xMy4yLDY3LjggYyA3LjYsLTAuMiAxMy4zLDAgMTMuMywwIDcuNSwwLjkgMTIuOSw3LjggMTIsMTUuMyAtMC44LDYuMyAtNS43LDExLjIgLTEyLDEyIDAsMCAtMjIuMywwLjEgLTM1LjgsMS41IC0yMi44LDIuMyAtMzguMywxMC42IC0zOC4zLDEwLjYgLTYuNywzLjUgLTE1LDAuOSAtMTguNSwtNS44IC0zLjUsLTYuNyAtMC45LC0xNSA1LjgsLTE4LjUgMCwwIDIwLjIsLTEwLjcgNDguNCwtMTMuNSA3LjksLTAuOSAxNy41LC0xLjQgMjUuMSwtMS42IHogbSAxMy4yLDY3LjUgYyA3LjYsMCAxMy43LDYuMiAxMy43LDEzLjcgMCw3LjYgLTYuMiwxMy43IC0xMy43LDEzLjcgMCwwIC0yMi4zLC0wLjEgLTM1LjgsMS4yIC0yMi44LDIuMyAtMzguMywxMC42IC0zOC4zLDEwLjYgLTYuNywzLjUgLTE1LDAuOSAtMTguNSwtNS44IC0zLjUsLTYuNyAtMC45LC0xNSA1LjgsLTE4LjUgMCwwIDIwLjIsLTEwLjcgNDguNCwtMTMuNSAxNi4yLC0xLjUgMzguNCwtMS40IDM4LjQsLTEuNCB6IgogICAgICAgaWQ9InBhdGgxIiAvPgogIDwvc3ZnOmc+CiAgPGRpdgogICAgIGlkPSJzYWthLWd1aS1yb290Ij4KICAgIDxkaXY+CiAgICAgIDxkaXY+CiAgICAgICAgPHN0eWxlIC8+CiAgICAgIDwvZGl2PgogICAgPC9kaXY+CiAgPC9kaXY+Cjwvc3ZnOnN2Zz4K">
+        <!--?lit$144989026$--><span class="language">
+        <!--?lit$144989026$--><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="language" class="svg-inline--fa fa-language icon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><path fill="currentColor" d="M0 128C0 92.7 28.7 64 64 64l192 0 48 0 16 0 256 0c35.3 0 64 28.7 64 64l0 256c0 35.3-28.7 64-64 64l-256 0-16 0-48 0L64 448c-35.3 0-64-28.7-64-64L0 128zm320 0l0 256 256 0 0-256-256 0zM178.3 175.9c-3.2-7.2-10.4-11.9-18.3-11.9s-15.1 4.7-18.3 11.9l-64 144c-4.5 10.1 .1 21.9 10.2 26.4s21.9-.1 26.4-10.2l8.9-20.1 73.6 0 8.9 20.1c4.5 10.1 16.3 14.6 26.4 10.2s14.6-16.3 10.2-26.4l-64-144zM160 233.2L179 276l-38 0 19-42.8zM448 164c11 0 20 9 20 20l0 4 44 0 16 0c11 0 20 9 20 20s-9 20-20 20l-2 0-1.6 4.5c-8.9 24.4-22.4 46.6-39.6 65.4c.9 .6 1.8 1.1 2.7 1.6l18.9 11.3c9.5 5.7 12.5 18 6.9 27.4s-18 12.5-27.4 6.9l-18.9-11.3c-4.5-2.7-8.8-5.5-13.1-8.5c-10.6 7.5-21.9 14-34 19.4l-3.6 1.6c-10.1 4.5-21.9-.1-26.4-10.2s.1-21.9 10.2-26.4l3.6-1.6c6.4-2.9 12.6-6.1 18.5-9.8l-12.2-12.2c-7.8-7.8-7.8-20.5 0-28.3s20.5-7.8 28.3 0l14.6 14.6 .5 .5c12.4-13.1 22.5-28.3 29.8-45L448 228l-72 0c-11 0-20-9-20-20s9-20 20-20l52 0 0-4c0-11 9-20 20-20z"></path></svg>
+        <!--?lit$144989026$-->en</span>  <!--?lit$144989026$--><span class="version">
+        <!--?lit$144989026$--><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="code-branch" class="svg-inline--fa fa-code-branch icon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M80 104a24 24 0 1 0 0-48 24 24 0 1 0 0 48zm80-24c0 32.8-19.7 61-48 73.3l0 87.8c18.8-10.9 40.7-17.1 64-17.1l96 0c35.3 0 64-28.7 64-64l0-6.7C307.7 141 288 112.8 288 80c0-44.2 35.8-80 80-80s80 35.8 80 80c0 32.8-19.7 61-48 73.3l0 6.7c0 70.7-57.3 128-128 128l-96 0c-35.3 0-64 28.7-64 64l0 6.7c28.3 12.3 48 40.5 48 73.3c0 44.2-35.8 80-80 80s-80-35.8-80-80c0-32.8 19.7-61 48-73.3l0-6.7 0-198.7C19.7 141 0 112.8 0 80C0 35.8 35.8 0 80 0s80 35.8 80 80zm232 0a24 24 0 1 0 -48 0 24 24 0 1 0 48 0zM80 456a24 24 0 1 0 0-48 24 24 0 1 0 0 48z"></path></svg> <!--?lit$144989026$-->latest
+      </span> 
+        <span class="caret"><!--?lit$144989026$--><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="caret-down" class="svg-inline--fa fa-caret-down icon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M137.4 374.6c12.5 12.5 32.8 12.5 45.3 0l128-128c9.2-9.2 11.9-22.9 6.9-34.9s-16.6-19.8-29.6-19.8L32 192c-12.9 0-24.6 7.8-29.6 19.8s-2.2 25.7 6.9 34.9l128 128z"></path></svg></span>
+      </header>
+    
+        <main class=" closed ">
+          <!--?lit$144989026$-->
+      <dl class="languages">
+        <dt>Languages</dt>
+        <!--?lit$144989026$--><!----><dd><!--?lit$144989026$--><a href="https://docs.PRJ16.io/cs/latest/developer/webapi.html"><!--?lit$144989026$-->cs</a></dd><!----><!----><dd><!--?lit$144989026$--><a href="https://docs.PRJ16.io/de/latest/developer/webapi.html"><!--?lit$144989026$-->de</a></dd><!----><!----><dd><!--?lit$144989026$--><strong><!--?lit$144989026$--><a href="https://docs.PRJ16.io/en/latest/developer/webapi.html"><!--?lit$144989026$-->en</a></strong></dd><!----><!----><dd><!--?lit$144989026$--><a href="https://docs.PRJ16.io/es/latest/developer/webapi.html"><!--?lit$144989026$-->es</a></dd><!----><!----><dd><!--?lit$144989026$--><a href="https://docs.PRJ16.io/et/latest/developer/webapi.html"><!--?lit$144989026$-->et</a></dd><!----><!----><dd><!--?lit$144989026$--><a href="https://docs.PRJ16.io/eu/latest/developer/webapi.html"><!--?lit$144989026$-->eu</a></dd><!----><!----><dd><!--?lit$144989026$--><a href="https://docs.PRJ16.io/fr/latest/developer/webapi.html"><!--?lit$144989026$-->fr</a></dd><!----><!----><dd><!--?lit$144989026$--><a href="https://docs.PRJ16.io/hu/latest/developer/webapi.html"><!--?lit$144989026$-->hu</a></dd><!----><!----><dd><!--?lit$144989026$--><a href="https://docs.PRJ16.io/it/latest/developer/webapi.html"><!--?lit$144989026$-->it</a></dd><!----><!----><dd><!--?lit$144989026$--><a href="https://docs.PRJ16.io/lt/latest/developer/webapi.html"><!--?lit$144989026$-->lt</a></dd><!----><!----><dd><!--?lit$144989026$--><a href="https://docs.PRJ16.io/nl/latest/developer/webapi.html"><!--?lit$144989026$-->nl</a></dd><!----><!----><dd><!--?lit$144989026$--><a href="https://docs.PRJ16.io/pl/latest/developer/webapi.html"><!--?lit$144989026$-->pl</a></dd><!----><!----><dd><!--?lit$144989026$--><a href="https://docs.PRJ16.io/ru/latest/developer/webapi.html"><!--?lit$144989026$-->ru</a></dd><!----><!----><dd><!--?lit$144989026$--><a href="https://docs.PRJ16.io/sl/latest/developer/webapi.html"><!--?lit$144989026$-->sl</a></dd><!----><!----><dd><!--?lit$144989026$--><a href="https://docs.PRJ16.io/sr/latest/developer/webapi.html"><!--?lit$144989026$-->sr</a></dd><!----><!----><dd><!--?lit$144989026$--><a href="https://docs.PRJ16.io/sv/latest/developer/webapi.html"><!--?lit$144989026$-->sv</a></dd><!----><!----><dd><!--?lit$144989026$--><a href="https://docs.PRJ16.io/tr/latest/developer/webapi.html"><!--?lit$144989026$-->tr</a></dd><!----><!----><dd><!--?lit$144989026$--><a href="https://docs.PRJ16.io/uk/latest/developer/webapi.html"><!--?lit$144989026$-->uk</a></dd><!----><!----><dd><!--?lit$144989026$--><a href="https://docs.PRJ16.io/zh-cn/latest/developer/webapi.html"><!--?lit$144989026$-->zh-cn</a></dd><!----><!----><dd><!--?lit$144989026$--><a href="https://docs.PRJ16.io/zh-tw/latest/developer/webapi.html"><!--?lit$144989026$-->zh-tw</a></dd><!---->
+      </dl>
+     <!--?lit$144989026$-->
+      <dl class="versions">
+        <dt>Versions</dt>
+        <!--?lit$144989026$--><!----><dd><!--?lit$144989026$--><strong><!--?lit$144989026$--><a href="https://docs.PRJ16.io/en/latest/developer/webapi.html"><!--?lit$144989026$-->latest</a></strong></dd><!---->
+      </dl>
+    
+          <!--?lit$144989026$--> <!--?lit$144989026$-->
+      <dl>
+        <dt>On Read the Docs</dt>
+        <dd>
+          <a href="https://app.readthedocs.org/projects/PRJ16/?utm_source=PRJ16&amp;utm_content=flyout">Project Home</a>
+        </dd>
+        <dd>
+          <a href="https://app.readthedocs.org/projects/PRJ16/builds/?utm_source=PRJ16&amp;utm_content=flyout">Builds</a>
+        </dd>
+      </dl>
+    
+          <!--?lit$144989026$--> <!--?lit$144989026$-->
+        <dl>
+          <dt>Search</dt>
+          <dd>
+            <form id="flyout-search-form">
+              <input type="text" name="q" aria-label="Search docs" placeholder="Search docs">
+            </form>
+          </dd>
+        </dl>
+      
+          <hr>
+          <!--?lit$144989026$-->
+      <small>
+        <span>
+          <a href="https://docs.readthedocs.io/page/addons.html?utm_source=PRJ16&amp;utm_content=flyout">Addons documentation</a></span>
+        <span> ― </span>
+        <span>Hosted by
+          <a href="https://about.readthedocs.com/?utm_source=PRJ16&amp;utm_content=flyout">Read the Docs</a></span>
+      </small>
+    
+        </main>
+      </div>
+    </template></readthedocs-flyout><readthedocs-notification class="raised toast"><template shadowrootmode="open"><!----></template></readthedocs-notification><readthedocs-search class="raised floating"><template shadowrootmode="open"><!---->
+      <div role="search" hidden="">
+        <div class="background"></div>
+        <div class="content">
+          <form class="  ">
+            <label><!--?lit$144989026$--><svg aria-labelledby="svg-inline--fa-title-hOWFOs9YeO7T" data-prefix="fas" data-icon="magnifying-glass" class="svg-inline--fa fa-magnifying-glass" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><title id="svg-inline--fa-title-hOWFOs9YeO7T">Search docs</title><path fill="currentColor" d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z"></path></svg></label>
+            <input placeholder="Search docs" type="search" autocomplete="off">
+          </form>
+          <!--?lit$144989026$-->
+          <div class="results">
+            <!--?lit$144989026$--><p>No recent searches</p>
+          </div>
+          <div class="footer">
+            <ul class="help">
+              <li><code>Enter</code> to select</li>
+              <li><code>Up</code>/<code>Down</code> to navigate</li>
+              <li><code>Esc</code> to close</li>
+            </ul>
+            <div class="credits">
+              Search powered by
+              <a href="https://about.readthedocs.com/?utm_source=PRJ16&amp;utm_content=search">
+                <img alt="Read the Docs" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB2ZXJzaW9uPSIxLjEiIGlkPSJzdmciIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IiB2aWV3Qm94PSI2OTQgMTk3IDIwMDAgNDAwIj4KPGcgaWQ9ImxvZ28iIHRyYW5zZm9ybT0ibWF0cml4KDAuNTU3NTM2NDQsMCwwLDAuNTU3NTM2NDQsNjguMzA4MTM1LDEwNTAuMTI2MikiPgoJPHBhdGggc3R5bGU9ImZpbGw6IzMyMzIyQSIgZD0iTTE0MDguMS0xMTgxLjdjLTcuNSwxLTEyLjcsNy44LTExLjcsMTUuMyAgIGMwLjcsNS40LDQuNiw5LjksOS45LDExLjNjMCwwLDMzLjIsMTEsODkuNywxNS42YzQ1LjQsMy43LDk2LjktMy4yLDk2LjktMy4yYzcuNS0wLjIsMTMuNS02LjUsMTMuMi0xNHMtNi41LTEzLjUtMTQtMTMuMiAgIGMtMC45LDAtMS44LDAuMS0yLjYsMC4zYzAsMC01MC40LDYuMi05MS4zLDIuOWMtNTQtNC40LTgzLjQtMTQuMy04My40LTE0LjNDMTQxMi42LTExODEuNywxNDEwLjMtMTE4MiwxNDA4LjEtMTE4MS43eiAgICBNMTQwOC4xLTEyNDkuM2MtNy41LDEtMTIuNyw3LjgtMTEuNywxNS4zYzAuNyw1LjQsNC42LDkuOSw5LjksMTEuM2MwLDAsMzMuMiwxMSw4OS43LDE1LjZjNDUuNCwzLjcsOTYuOS0zLjIsOTYuOS0zLjIgICBjNy41LTAuMiwxMy41LTYuNSwxMy4yLTE0cy02LjUtMTMuNS0xNC0xMy4yYy0wLjksMC0xLjgsMC4xLTIuNiwwLjNjMCwwLTUwLjQsNi4yLTkxLjMsMi45Yy01NC00LjQtODMuNC0xNC4zLTgzLjQtMTQuMyAgIEMxNDEyLjYtMTI0OS4zLDE0MTAuMy0xMjQ5LjYsMTQwOC4xLTEyNDkuM3ogTTE0MDguMS0xMzE2LjljLTcuNSwxLTEyLjcsNy44LTExLjcsMTUuM2MwLjcsNS40LDQuNiw5LjksOS45LDExLjMgICBjMCwwLDMzLjIsMTEsODkuNywxNS42YzQ1LjQsMy43LDk2LjktMy4yLDk2LjktMy4yYzcuNS0wLjIsMTMuNS02LjUsMTMuMi0xNHMtNi41LTEzLjUtMTQtMTMuMmMtMC45LDAtMS44LDAuMS0yLjYsMC4zICAgYzAsMC01MC40LDYuMi05MS4zLDIuOWMtNTQtNC40LTgzLjQtMTQuMy04My40LTE0LjNDMTQxMi42LTEzMTYuOSwxNDEwLjMtMTMxNy4yLDE0MDguMS0xMzE2Ljl6IE0xNDA4LjEtMTM4NC40ICAgYy03LjUsMS0xMi43LDcuOC0xMS43LDE1LjNjMC43LDUuNCw0LjYsOS45LDkuOSwxMS4zYzAsMCwzMy4yLDExLDg5LjcsMTUuNmM0NS40LDMuNyw5Ni45LTMuMiw5Ni45LTMuMmM3LjUtMC4yLDEzLjUtNi41LDEzLjItMTQgICBzLTYuNS0xMy41LTE0LTEzLjJjLTAuOSwwLTEuOCwwLjEtMi42LDAuM2MwLDAtNTAuNCw2LjItOTEuMywyLjljLTU0LTQuNC04My40LTE0LjMtODMuNC0xNC4zICAgQzE0MTIuNi0xMzg0LjUsMTQxMC4zLTEzODQuNywxNDA4LjEtMTM4NC40eiBNMTMxMy40LTE0NTUuN2MtNzEsMC41LTk3LjUsMjIuMy05Ny41LDIyLjN2NTMwLjNjMCwwLDI1LjgtMjIuMywxMDktMTguOSAgIGM4My4yLDMuNCwxMDAuMywzMi42LDIwMi41LDM0LjZjMTAyLjIsMi4xLDEyNy45LTE1LjcsMTI3LjktMTUuN2wxLjUtNTQwLjZjMCwwLTQ2LDEzLTEzNS41LDEzLjdzLTExMS0yMi44LTE5My4yLTI1LjUgICBDMTMyMy0xNDU1LjYsMTMxOC4xLTE0NTUuNywxMzEzLjQtMTQ1NS43eiBNMTM3Mi44LTE0MjEuMWMwLDAsNDMsMTQuMiwxMjIuNSwxOC4yYzY3LjIsMy4zLDEzNC41LTYuNiwxMzQuNS02LjZ2NDgwLjUgICBjMCwwLTM0LjEsMTcuOS0xMTkuMywxMS44Yy02Ni00LjctMTM4LjctMjkuNy0xMzguNy0yOS43TDEzNzIuOC0xNDIxLjF6IE0xMzMxLjMtMTQwOC42YzcuNiwwLDEzLjcsNi4yLDEzLjcsMTMuNyAgIHMtNi4yLDEzLjctMTMuNywxMy43YzAsMC0yMi4zLDAuMS0zNS44LDEuNWMtMjIuOCwyLjMtMzguMywxMC42LTM4LjMsMTAuNmMtNi43LDMuNS0xNSwxLTE4LjUtNS43cy0xLTE1LDUuNy0xOC41YzAsMCwwLDAsMCwwICAgYzAsMCwyMC4yLTEwLjcsNDguNC0xMy41QzEzMDkuMS0xNDA4LjUsMTMzMS4zLTE0MDguNiwxMzMxLjMtMTQwOC42eiBNMTMxOC4xLTEzNDAuOGM3LjYtMC4yLDEzLjMsMCwxMy4zLDAgICBjNy41LDAuOSwxMi45LDcuOCwxMiwxNS4zYy0wLjgsNi4zLTUuNywxMS4yLTEyLDEyYzAsMC0yMi4zLDAuMS0zNS44LDEuNWMtMjIuOCwyLjMtMzguMywxMC42LTM4LjMsMTAuNmMtNi43LDMuNS0xNSwwLjktMTguNS01LjggICBjLTMuNS02LjctMC45LTE1LDUuOC0xOC41YzAsMCwyMC4yLTEwLjcsNDguNC0xMy41QzEzMDAuOS0xMzQwLjEsMTMxMC41LTEzNDAuNiwxMzE4LjEtMTM0MC44eiBNMTMzMS4zLTEyNzMuMyAgIGM3LjYsMCwxMy43LDYuMiwxMy43LDEzLjdjMCw3LjYtNi4yLDEzLjctMTMuNywxMy43YzAsMC0yMi4zLTAuMS0zNS44LDEuMmMtMjIuOCwyLjMtMzguMywxMC42LTM4LjMsMTAuNiAgIGMtNi43LDMuNS0xNSwwLjktMTguNS01LjhjLTMuNS02LjctMC45LTE1LDUuOC0xOC41YzAsMCwyMC4yLTEwLjcsNDguNC0xMy41QzEzMDkuMS0xMjczLjQsMTMzMS4zLTEyNzMuMywxMzMxLjMtMTI3My4zeiIvPgo8L2c+CjxnIGlkPSJ0ZXh0Ij4KCTxwYXRoIHN0eWxlPSJmaWxsOiMzMjMyMkEiIGQ9Ik0xMTI4LjYsNDkxLjlWNDcwbDguOS0wLjhjNS4yLTAuNSw3LjgtMy4xLDcuOC03LjZWMzM2bC0xNS40LTAuOHYtMjNoNzMuOCAgIGMyMC45LDAsMzYuOSwzLjksNDguMSwxMS42YzExLjIsNy43LDE2LjgsMjAuNSwxNi44LDM4LjFjMCwxMi4zLTMuMiwyMi4zLTkuNywzMC4zYy02LjMsNy45LTEzLjksMTMuNy0yMi43LDE3LjMgICBjNi41LDIuMywxMS42LDcuOCwxNS40LDE2LjVsMTkuNSw0Mi40bDE1LjQsMC41djIzaC02Ni44VjQ3MGw3LjgtMC44YzQuMS0wLjUsNi4yLTIuMiw2LjItNC45YzAtMS4xLTAuNC0yLjMtMS4xLTMuOGwtMTIuNy0yNyAgIGMtMi00LjUtNC4yLTcuNy02LjgtOS41Yy0yLjMtMi01LjgtMy0xMC4zLTNoLTI0LjZ2NDdsMTcuNiwwLjh2MjNMMTEyOC42LDQ5MS45IE0xMTc4LjMsMzk1LjRoMjMuNWMyMi4yLDAsMzMuMi05LjksMzMuMi0yOS43ICAgYzAtMTEuNC0zLTE4LjctOC45LTIyLjJjLTUuOC0zLjQtMTUuMS01LjEtMjguMS01LjFoLTE5LjdWMzk1LjQiLz4KCTxwYXRoIHN0eWxlPSJmaWxsOiMzMjMyMkEiIGQ9Ik0xMzU2LDM1MS45YzEzLjUsMCwyNC4yLDMuMywzMi4yLDEwYzcuOSw2LjUsMTEuOSwxNS43LDExLjksMjcuNmMwLDcuOS0xLjcsMTUtNS4xLDIxLjEgICBjLTMuNCw1LjktNy43LDEwLjYtMTIuNywxNC4xYy01LDMuNC0xMS4yLDYuMi0xOC40LDguNGMtMTIuMSwzLjYtMjUuNyw1LjQtNDAuOCw1LjRjMC41LDkuNSwzLjUsMTcuMyw4LjksMjMuMiAgIGM1LjQsNS44LDEzLjcsOC42LDI0LjksOC42YzExLjIsMCwyMi4zLTQsMzMuNS0xMS45bDEwLjMsMjEuOWMtMy42LDMuMi05LjcsNi42LTE4LjQsMTBjLTguNSwzLjQtMTguMiw1LjEtMjkuMiw1LjEgICBjLTIyLDAtMzguMS02LTQ4LjQtMTguMWMtMTAuMy0xMi4zLTE1LjQtMjktMTUuNC01MC4zYzAtMjEuMyw1LjktMzkuMSwxNy42LTUzLjVDMTMxOC41LDM1OS4xLDEzMzQuOSwzNTEuOSwxMzU2LDM1MS45ICAgIE0xMzQzLjYsNDEzLjhjNi43LTEuMywxMi44LTMuOSwxOC40LTcuOGM1LjYtNC4xLDguNC05LDguNC0xNC42YzAtMTEtNS40LTE2LjUtMTYuMi0xNi41Yy0xMC4xLDAtMTcuOCw0LjEtMjMuMiwxMi4yICAgYy01LjQsNy45LTguNCwxNy41LTguOSwyOC42QzEzMjkuOSw0MTUuNSwxMzM3LjEsNDE0LjksMTM0My42LDQxMy44Ii8+Cgk8cGF0aCBzdHlsZT0iZmlsbDojMzIzMjJBIiBkPSJNMTUyOS42LDM2MS40djEwMC41YzAsMi45LDAuNSw0LjksMS40LDUuOWMxLjEsMS4xLDIuOSwxLjcsNS40LDEuOWw4LjYsMC41djIxLjZoLTQzdi0xNS43ICAgbC0wLjgtMC4zYy05LDEzLTIxLjQsMTkuNS0zNywxOS41Yy0xOC40LDAtMzItNS45LTQwLjgtMTcuNmMtOC44LTExLjctMTMuMi0yNy43LTEzLjItNDguMWMwLTI0LjUsNS45LTQzLjYsMTcuOC01Ny4zICAgYzExLjktMTMuNywyOS43LTIwLjUsNTMuNS0yMC41QzE0OTYuOCwzNTEuOSwxNTEyLjksMzU1LjEsMTUyOS42LDM2MS40IE0xNDk4LjMsNDQ4Ljl2LTcwYy01LTIuMy0xMi0zLjUtMjAuOC0zLjUgICBjLTEyLjEsMC0yMC44LDQuOS0yNi4yLDE0LjZjLTUuNCw5LjctOC4xLDIyLjYtOC4xLDM4LjdjMCwyOS4yLDkuNCw0My44LDI4LjEsNDMuOGM3LjksMCwxNC40LTIuMywxOS41LTcgICBDMTQ5NS43LDQ2MC42LDE0OTguMyw0NTUuMSwxNDk4LjMsNDQ4LjkiLz4KCTxwYXRoIHN0eWxlPSJmaWxsOiMzMjMyMkEiIGQ9Ik0xNjE2LjMsMzUxLjljNy43LDAsMTUuMSwxLjEsMjIuMiwzLjJ2LTI3LjNjMC00LTIuMy02LjEtNy02LjVsLTExLjYtMC44di0yMS40aDUwLjN2MTY0LjMgICBjMC4yLDQuMSwyLjQsNi4yLDYuOCw2LjJsOS41LDAuNXYyMS42aC00My44VjQ3NmwtMC44LTAuM2MtOC4xLDEzLjItMjAuNCwxOS43LTM2LjgsMTkuN2MtMjAuNSwwLTM1LTYuOC00My4yLTIwLjUgICBjLTcuNi0xMi40LTExLjQtMjcuNy0xMS40LTQ1LjdjMC0yMy40LDUuOC00Mi4yLDE3LjMtNTYuMkMxNTc5LjMsMzU4LjksMTU5NS41LDM1MS45LDE2MTYuMywzNTEuOSBNMTYzOC40LDQ0OS44di03MCAgIGMtNi41LTIuOS0xMy4zLTQuMy0yMC41LTQuM2MtMTEuOSwwLTIwLjYsNC44LTI2LjIsMTQuM2MtNS40LDkuNi04LjEsMjEuNy04LjEsMzYuNWMwLDMwLjMsOS43LDQ1LjQsMjkuMiw0NS40ICAgYzcuNCwwLDEzLjUtMi4xLDE4LjQtNi4yQzE2MzYsNDYxLjEsMTYzOC40LDQ1NS45LDE2MzguNCw0NDkuOCIvPgoJPHBhdGggc3R5bGU9ImZpbGw6IzMyMzIyQSIgZD0iTTE3OTEuNyw0NzAuNmMwLDAtMTIuNSw0LjctMTkuMiw0LjdzLTkuMi0zLjMtOS4yLTExLjhjMC0zLjgsMC41LTguOCwxLjQtMTQuOWwxMC4yLTYzLjFoMzIuNiAgIGwyLjgtMTcuN2gtMzIuNmw1LjctMzQuNUwxNzYwLDMzOGwtNC43LDI5LjhsLTIzLjYsMi40bC0yLjYsMTUuNGgyMy40TDE3NDIsNDUxYy0wLjksNS40LTEuNCwxMC42LTEuNCwxNS4xICAgYzAsMTguNyw3LjgsMjguMSwyMy45LDI4LjFjMTMuMiwwLDMxLTEwLjksMzEtMTAuOUwxNzkxLjcsNDcwLjYiLz4KCTxwYXRoIHN0eWxlPSJmaWxsOiMzMjMyMkEiIGQ9Ik0xODY1LDMwOS44bC00My4zLDEuMmwtMi4xLDEzbDE5LjksNC43bC0yNiwxNjMuMmgyMi41bDcuOC00Mi42YzAsMCwxOC43LTY1LDQ5LjQtNjUgICBjOS41LDAsMTIuMyw2LjksMTIuMywxNS42YzAsMy4zLTAuNSw2LjktMC45LDEwLjRsLTEzLjUsODEuNmw0My4zLTIuNGwyLjEtMTNsLTE5LjktMy41bDEwLjYtNjYuMmMwLjctNSwxLjItOS43LDEuMi0xNCAgIGMwLTE3LTYuOS0yOC42LTI1LjgtMjguNmMtMzUuOSwwLTU0LjksNDUuNi01NS44LDQ4LjJMMTg2NSwzMDkuOCIvPgoJPHBhdGggc3R5bGU9ImZpbGw6IzMyMzIyQSIgZD0iTTIwMzUsNDY0LjdjMCwwLTIxLjUsMTAuNi0zOC44LDEwLjZjLTE3LjcsMC0yNi03LjgtMjYtMjQuNmMwLTMuMSwwLjItNi42LDAuNy0xMC4yICAgYzQ5LDAsODMtMTguNCw4My00NS42YzAtMTguNy0xNS4xLTMwLjctMzktMzAuN2MtMzcuNiwwLTY4LjMsMzguNS02OC4zLDg3LjVjMCwyNiwxNi42LDQyLjYsNDIuNiw0Mi42YzI3LjksMCw1My0xNy41LDUzLTE3LjUgICBMMjAzNSw0NjQuNyBNMTk3Myw0MjRjNi4xLTI0LjgsMjMuNC00Mi4xLDQwLjctNDIuMWMxMi4xLDAsMTcuNyw1LDE3LjcsMTUuNEMyMDMxLjUsNDEyLjksMjAwNi42LDQyNCwxOTczLDQyNCIvPgoJPHBhdGggc3R5bGU9ImZpbGw6IzMyMzIyQSIgZD0iTTIwOTMuNyw0OTEuOVY0NzBsOC45LTAuOGM1LjItMC41LDcuOC0zLjEsNy44LTcuNlYzMzZsLTE1LjQtMC44di0yM2g3NC4xICAgYzI2LjUsMCw0Ny4xLDcsNjEuOSwyMS4xYzE1LDE0LjEsMjIuNCwzNC45LDIyLjQsNjIuNGMwLDE3LjEtMi4zLDMyLjEtNi44LDQ0LjljLTQuNSwxMi42LTEwLjYsMjIuNS0xOC40LDI5LjcgICBjLTE1LjUsMTQuNC0zNC44LDIxLjYtNTcuOCwyMS42TDIwOTMuNyw0OTEuOSBNMjE0My40LDMzOC40VjQ2NmgyNy42YzE1LjUsMCwyNy42LTUuNiwzNi4yLTE2LjhjOC42LTExLjIsMTMtMjcuNCwxMy00OC43ICAgYzAtNDEuNC0xNy42LTYyLjItNTIuNy02Mi4ySDIxNDMuNCIvPgoJPHBhdGggc3R5bGU9ImZpbGw6IzMyMzIyQSIgZD0iTTIzMzAsNDcyLjJjMTkuNiwwLDI5LjUtMTUuOSwyOS41LTQ3LjZjMC0xNi0yLjMtMjguMi02LjgtMzYuNWMtNC4zLTguMy0xMS43LTEyLjQtMjIuMi0xMi40ICAgYy0xMC4zLDAtMTcuOCw0LTIyLjcsMTEuOWMtNC45LDcuOS03LjMsMTguNy03LjMsMzIuNGMwLDI1LjQsNC43LDQxLjQsMTQuMSw0Ny44QzIzMTguOCw0NzAuNywyMzIzLjksNDcyLjIsMjMzMCw0NzIuMiAgICBNMjI2Ny45LDQyMy44YzAtMTMuMywyLTI0LjksNS45LTM0LjZjNC05LjksOS4zLTE3LjUsMTUuOS0yMi43YzEyLjgtOS43LDI2LjktMTQuNiw0Mi40LTE0LjZjMTAuOCwwLDE5LjksMS44LDI3LjMsNS40ICAgYzcuNiwzLjQsMTMuNCw3LjUsMTcuNiwxMi4yYzQuMyw0LjUsNy45LDExLjIsMTAuOCwyMGMzLjEsOC42LDQuNiwxOC45LDQuNiwzMC44YzAsMjQuOS02LDQzLjctMTguMSw1Ni41ICAgYy0xMi4xLDEyLjgtMjcuNiwxOS4yLTQ2LjUsMTkuMmMtMTguNywwLTMzLjQtNi00NC4xLTE4LjFDMjI3My4yLDQ2NS42LDIyNjcuOSw0NDcuNiwyMjY3LjksNDIzLjgiLz4KCTxwYXRoIHN0eWxlPSJmaWxsOiMzMjMyMkEiIGQ9Ik0yNDM4LjIsNDIyLjVjMCwxNS4zLDIuOSwyNy4yLDguNiwzNS43YzUuOCw4LjUsMTQuMSwxMi43LDI0LjksMTIuN2MxMSwwLDIxLjgtMy45LDMyLjQtMTEuNiAgIGwxMS42LDIwLjhjLTEyLjgsMTAuNS0yOC44LDE1LjctNDguMSwxNS43Yy0xOS4zLDAtMzQuNS02LTQ1LjctMTguMWMtMTEtMTIuMy0xNi41LTMwLjMtMTYuNS01NC4xczYuMy00MS42LDE4LjktNTMuNSAgIGMxMi44LTEyLjEsMjcuMS0xOC4xLDQzLTE4LjFjMTYsMCwzMC45LDMuNyw0NC42LDExLjF2MzUuMWwtMjQuOSwxLjl2LTEzYzAtNC45LTEuOC03LjgtNS40LTguOWMtMy40LTEuMy03LTEuOS0xMC44LTEuOSAgIEMyNDQ5LjEsMzc2LjIsMjQzOC4yLDM5MS42LDI0MzguMiw0MjIuNSIvPgoJPHBhdGggc3R5bGU9ImZpbGw6IzMyMzIyQSIgZD0iTTI1OTIuOSwzNzYuNWMtNC4zLTEuNi05LjYtMi40LTE1LjctMi40Yy02LjEsMC0xMS4xLDEuNC0xNC45LDQuM2MtMy42LDIuNy01LjQsNi4xLTUuNCwxMC4zICAgYzAsNCwwLjYsNy4xLDEuOSw5LjVjMS40LDIuMiwzLjYsNC4xLDYuNSw1LjdjNC41LDIuMyw5LjksNC40LDE2LjIsNi4yYzYuMywxLjYsMTEsMywxNC4xLDQuMWMzLjEsMC45LDYuOCwyLjUsMTEuNCw0LjkgICBjNC43LDIuMyw4LjIsNC45LDEwLjUsNy42YzYuMyw2LjcsOS41LDE1LjIsOS41LDI1LjdjMCwxMy41LTUsMjQuMS0xNC45LDMxLjljLTkuNyw3LjYtMjIuMiwxMS40LTM3LjMsMTEuNCAgIGMtMjIsMC0zOC42LTIuOC00OS43LTguNHYtMzcuNmwyNC4zLTEuOXYxM2MwLDcuOSw3LjYsMTEuOSwyMi43LDExLjlzMjIuNy01LjUsMjIuNy0xNi41YzAtNC0xLjQtNy4yLTQuMS05LjcgICBjLTIuNS0yLjUtNS00LjItNy42LTUuMWMtMi41LTAuOS01LjYtMS44LTkuMi0yLjdjLTMuNC0wLjktNi44LTEuOC0xMC4zLTIuN2MtMy4yLTAuOS02LjgtMi4xLTEwLjgtMy41Yy0zLjgtMS42LTgtMy45LTEyLjctNi44ICAgYy05LjItNS45LTEzLjgtMTUuOS0xMy44LTI5LjdjMC0xNC4xLDUtMjQuOSwxNC45LTMyLjRjOS45LTcuNiwyMi4zLTExLjQsMzcuMy0xMS40YzE1LjEsMCwzMC4xLDMuNiw0NC45LDEwLjh2MzIuNGwtMjQuMywxLjkgICB2LTExLjRDMjU5OS4xLDM4MS4yLDI1OTcsMzc4LjEsMjU5Mi45LDM3Ni41Ii8+CjwvZz4KPGRpdiB4bWxucz0iIiBpZD0ic2FrYS1ndWktcm9vdCI+PGRpdj48ZGl2PjxzdHlsZS8+PC9kaXY+PC9kaXY+PC9kaXY+PC9zdmc+">
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </template></readthedocs-search><readthedocs-hotkeys><template shadowrootmode="open"><!----></template></readthedocs-hotkeys></body></html>

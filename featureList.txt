@@ -1,0 +1,20 @@
++-----------------------------------------------------------+
+|                                                           |
+|                     Available Features                    |
+|                                                           |
++----+--------------------------+---------------------------+
+| No | Name                     | Args                      |
++----+--------------------------+---------------------------+
+|  1 | Start App                | Num of apps, App names    |
+|  2 | Screen Lock              |                           |
+|  3 | User Login               | Username, Password        |
+|  4 | User Logoff              |                           | 
+|  5 | Reboot                   |                           |
+|  6 | Power Down               |                           |
+|  7 | Text Message             | Message                   |
++----+--------------------------+---------------------------+
+|  8 | Demo Server              | DemoToken                 |
+|  9 | Demo Client (Fullscreen) | DemoToken, DemoServer     |
+| 10 | Demo Client (Window)     | DemoToken, DemoServer     |
++----+--------------------------+---------------------------+
+

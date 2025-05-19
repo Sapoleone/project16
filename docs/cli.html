@@ -1,0 +1,457 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" />
+  <meta name="readthedocs-addons-api-version" content="1"><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Command line interface &mdash; PRJ16 4.9.5 documentation</title>
+      <link rel="stylesheet" type="text/css" href="https://docs.veyon.io/en/latest/_static/pygments.css?v=03e43079" />
+      <link rel="stylesheet" type="text/css" href="https://docs.veyon.io/en/latest/_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="https://docs.veyon.io/en/latest/_static/theme_overrides.css?v=52c6eb83" />
+		
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Configuration reference" href="reference.html" />
+    <link rel="prev" title="LDAP/AD integration" href="ldap.html" /> 
+<script async type="text/javascript" src="/_/static/javascript/readthedocs-addons.js"></script><meta name="readthedocs-project-slug" content="PRJ16" /><meta name="readthedocs-version-slug" content="latest" /><meta name="readthedocs-resolver-filename" content="/admin/cli.html" /><meta name="readthedocs-http-status" content="200" /></head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            PRJ16
+          </a>
+              <div class="switch-menus">
+                <div class="version-switch"></div>
+                <div class="language-switch"></div>
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">PRJ16 Administrator Manual</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="installation.html">Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="configuration.html">Configuration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="access-control-rules.html">Access control rules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ldap.html">LDAP/AD integration</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Command line interface</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#authentication-key-management">Authentication key management</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#configuration-management">Configuration management</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#feature-control">Feature control</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#ldap">LDAP</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#network-object-directory">Network object directory</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#power">Power</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#remote-access">Remote access</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#service-control">Service control</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#shell">Shell</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="reference.html">Configuration reference</a></li>
+<li class="toctree-l2"><a class="reference internal" href="platform-notes.html">Platform specific notes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="release-notes.html">Release notes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="troubleshooting.html">Troubleshooting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="faq.html">FAQ - Frequently Asked Questions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="glossary.html">Technical glossary</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../user/index.html">PRJ16 User Manual</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../addons/index.html">PRJ16 Add-ons Integration Manual</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../developer/index.html">PRJ16 Developer Manual</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">PRJ16</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="index.html">PRJ16 Administrator Manual</a></li>
+      <li class="breadcrumb-item active">Command line interface</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/admin/cli.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="command-line-interface">
+<span id="commandlineinterface"></span><span id="index-0"></span><h1>Command line interface<a class="headerlink" href="#command-line-interface" title="Link to this heading"></a></h1>
+<p>For administrative tasks, the <em>PRJ16 Configurator</em> and the command line tool <em>PRJ16 CLI</em> are available. The program can be started via the command <code class="docutils literal notranslate"><span class="pre">PRJ16-cli</span></code> in the command line. On Windows there’s an additional non-console version <code class="docutils literal notranslate"><span class="pre">PRJ16-wcli</span></code> which allows automating tasks without irritating command line window popups. If the <span class="target" id="index-1"></span><code class="xref std std-envvar docutils literal notranslate"><span class="pre">$PATH</span></code> (Linux) or <span class="target" id="index-2"></span><code class="xref std std-envvar docutils literal notranslate"><span class="pre">%PATH%</span></code> (Windows) environment variable does not contain the PRJ16 installation directory, you must first change to the installation directory or prepend the directory to the program name.</p>
+<p>If the program is called with the <code class="docutils literal notranslate"><span class="pre">help</span></code> parameter, a list of all available modules is displayed. The list can vary depending on the installed PRJ16 plugins:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>$ PRJ16-cli help
+Available modules:
+    authkeys - Commands for managing authentication keys
+    config - Commands for managing the configuration of PRJ16
+    ldap - Commands for configuring and testing LDAP/AD integration
+    networkobjects - Commands for managing the builtin network object directory
+    power - Commands for controlling power status of computers
+    remoteaccess - Remote view or control a computer
+    service - Commands for configuring and controlling PRJ16 Service
+    shell - Commands for shell functionalities
+</pre></div>
+</div>
+<p>Each CLI module supports the <code class="docutils literal notranslate"><span class="pre">help</span></code> command, so that a list of all available commands can be displayed for each module. Sample output for the <code class="docutils literal notranslate"><span class="pre">config</span></code> module:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>$ PRJ16-cli config help
+Available commands:
+    clear - Clear system-wide PRJ16 configuration
+    export - Export configuration to given file
+    get - Read and output configuration value for given key
+    import - Import configuration from given file
+    list - List all configuration keys and values
+    set - Write given value to given configuration key
+    unset - Unset (remove) given configuration key
+    upgrade - Upgrade and save configuration of program and plugins
+</pre></div>
+</div>
+<p>For some modules the <code class="docutils literal notranslate"><span class="pre">help</span></code> command can be supplied with a command name as an additional argument to get specific help for a command:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>$ PRJ16-cli remoteaccess help control
+
+remoteaccess control &lt;host&gt;
+</pre></div>
+</div>
+<section id="authentication-key-management">
+<h2>Authentication key management<a class="headerlink" href="#authentication-key-management" title="Link to this heading"></a></h2>
+<p>The <code class="docutils literal notranslate"><span class="pre">authkeys</span></code> module allows the management of authentication keys so that common operations such as importing an authentication key or assigning a user group can be automated easily.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">&lt;KEY&gt;</span></code> parameter always refers to a key name consisting of a name identifier and a type, e.g. <code class="docutils literal notranslate"><span class="pre">teacher/public</span></code>. A name identifier must consist of letters only. The type has to be either <code class="docutils literal notranslate"><span class="pre">private</span></code> or <code class="docutils literal notranslate"><span class="pre">public</span></code>.</p>
+</div>
+<dl class="describe">
+<dt class="sig sig-object">
+<span class="sig-name descname"><span class="pre">create</span> <span class="pre">&lt;NAME&gt;</span></span></dt>
+<dd><p>This command creates a authentication key pair with name &lt;NAME&gt; and saves private and public key to the configured key directories. The parameter must be a name for the key, which may only contain letters.</p>
+</dd></dl>
+
+<dl class="describe">
+<dt class="sig sig-object">
+<span class="sig-name descname"><span class="pre">delete</span> <span class="pre">&lt;KEY&gt;</span></span></dt>
+<dd><p>This command deletes the authentication key &lt;KEY&gt; from the configured key directory. Please note that a key can’t be recovered once it has been deleted.</p>
+</dd></dl>
+
+<dl class="describe">
+<dt class="sig sig-object">
+<span class="sig-name descname"><span class="pre">export</span> <span class="pre">&lt;KEY&gt;</span> <span class="pre">[&lt;FILE&gt;]</span></span></dt>
+<dd><p>This command exports the &lt;KEY&gt; to &lt;FILE&gt; authentication key. If &lt;FILE&gt; is not specified a name will be constructed from name and type of &lt;KEY&gt;.</p>
+</dd></dl>
+
+<dl class="describe">
+<dt class="sig sig-object">
+<span class="sig-name descname"><span class="pre">extract</span> <span class="pre">&lt;KEY&gt;</span></span></dt>
+<dd><p>This command extracts the public key part from the private key &lt;KEY&gt; and saves it as the associated public key. When setting up another master computer, it is therefore sufficient to transfer the private key only. The public key can then be extracted.</p>
+</dd></dl>
+
+<dl class="describe">
+<dt class="sig sig-object">
+<span class="sig-name descname"><span class="pre">import</span> <span class="pre">&lt;KEY&gt;</span> <span class="pre">[&lt;FILE&gt;]</span></span></dt>
+<dd><p>This command imports the authentication key &lt;KEY&gt; from &lt;FILE&gt;. If &lt;FILE&gt; is not specified a name will be constructed from name and type of &lt;KEY&gt;.</p>
+</dd></dl>
+
+<dl class="describe">
+<dt class="sig sig-object">
+<span class="sig-name descname"><span class="pre">list</span> <span class="pre">[details]</span></span></dt>
+<dd><p>This command lists all available authentication keys in the configured key directory. If the <code class="docutils literal notranslate"><span class="pre">details</span></code> option is specified a table with key details will be displayed instead. Some details might be missing if a key is not accessible e.g. due to the lack of read permissions.</p>
+</dd></dl>
+
+<dl class="describe">
+<dt class="sig sig-object">
+<span class="sig-name descname"><span class="pre">setaccessgroup</span> <span class="pre">&lt;KEY&gt;</span> <span class="pre">&lt;ACCESS</span> <span class="pre">GROUP&gt;</span></span></dt>
+<dd><p>This command adjusts file access permissions to &lt;KEY&gt; so that only the user group &lt;ACCESS GROUP&gt; has read access to it.</p>
+</dd></dl>
+
+</section>
+<section id="configuration-management">
+<span id="configurationmanagement"></span><h2>Configuration management<a class="headerlink" href="#configuration-management" title="Link to this heading"></a></h2>
+<p id="index-3">The local PRJ16 configuration can be managed using the <code class="docutils literal notranslate"><span class="pre">config</span></code> module. Both the complete configuration as individual configuration keys can be read or written.</p>
+<dl class="describe">
+<dt class="sig sig-object">
+<span class="sig-name descname"><span class="pre">clear</span></span></dt>
+<dd><p>This command resets the entire local configuration by deleting all configuration keys. Use this command to recreate a defined state without old settings before importing a configuration.</p>
+</dd></dl>
+
+<dl class="describe">
+<dt class="sig sig-object">
+<span class="sig-name descname"><span class="pre">export</span></span></dt>
+<dd><p>This command exports the local configuration to a file. The name of the destination file must be specified as an additional parameter:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>PRJ16-cli config export myconfig.json
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="describe">
+<dt class="sig sig-object">
+<span class="sig-name descname"><span class="pre">import</span></span></dt>
+<dd><p>This command imports a previously exported configuration file into the local configuration. The name of the configuration file to be imported must be specified as an additional argument:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>PRJ16-cli config import myconfig.json
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="describe">
+<dt class="sig sig-object">
+<span class="sig-name descname"><span class="pre">list</span> <span class="pre">[defaults</span> <span class="pre">|</span> <span class="pre">types]</span></span></dt>
+<dd><p>This command shows a list of all configuration keys and their corresponding values. This way you can get the names of the configuration keys in order to read or write them individually via the <code class="docutils literal notranslate"><span class="pre">get</span></code> or <code class="docutils literal notranslate"><span class="pre">set</span></code> commands. When additionally specifying <code class="docutils literal notranslate"><span class="pre">defaults</span></code> the default value for each configuration key is printed instead of the actual configured value. Alternatively the data types of the configuration keys can be inspected by specifying <code class="docutils literal notranslate"><span class="pre">types</span></code>.</p>
+</dd></dl>
+
+<dl class="describe">
+<dt class="sig sig-object">
+<span class="sig-name descname"><span class="pre">get</span></span></dt>
+<dd><p>This command allows reading a single configuration key. The name of the key must be supplied as a parameter.</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>PRJ16-cli config get Network/PRJ16ServerPort
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="describe">
+<dt class="sig sig-object">
+<span class="sig-name descname"><span class="pre">set</span></span></dt>
+<dd><p>This command can be used to write a single configuration key. The name of the key and the desired value must be passed as additional arguments:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>PRJ16-cli config set Network/PRJ16ServerPort 12345
+PRJ16-cli config set Service/Autostart true
+PRJ16-cli config set UI/Language de_DE
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="describe">
+<dt class="sig sig-object">
+<span class="sig-name descname"><span class="pre">unset</span></span></dt>
+<dd><p>With this command a single configuration key can be deleted, i.e. PRJ16 then uses the internal default value. The name of the key must be passed as an additional argument:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>PRJ16-cli config unset Directories/Screenshots
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="describe" id="cliconfigupgrade">
+<dt class="sig sig-object">
+<span class="sig-name descname"><span class="pre">upgrade</span></span></dt>
+<dd><p>With this command the configuration of PRJ16 and all plugins can be updated and saved. This may be necessary if settings or configuration formats have changed due to program or plugin updates.</p>
+</dd></dl>
+
+</section>
+<section id="feature-control">
+<h2>Feature control<a class="headerlink" href="#feature-control" title="Link to this heading"></a></h2>
+<p id="index-4">The <code class="docutils literal notranslate"><span class="pre">feature</span></code> module provides commands for querying available features and controlling them on remote computers.</p>
+<dl class="describe">
+<dt class="sig sig-object">
+<span class="sig-name descname"><span class="pre">list</span></span></dt>
+<dd><p>Displays a list with the names of all available features.</p>
+</dd></dl>
+
+<dl class="describe">
+<dt class="sig sig-object">
+<span class="sig-name descname"><span class="pre">show</span></span></dt>
+<dd><p>Displays a table with detailed information about all available features. This information include a description, the UID, the name of the plugin providing the respective feature and some other implementation-related details.</p>
+</dd></dl>
+
+<dl class="describe">
+<dt class="sig sig-object">
+<span class="sig-name descname"><span class="pre">start</span> <span class="pre">&lt;FEATURE&gt;</span> <span class="pre">&lt;HOST</span> <span class="pre">ADRESS&gt;</span> <span class="pre">[&lt;ARGUMENTS&gt;]</span></span></dt>
+<dd><p>Starts the specified feature on the specified host by connecting to the PRJ16 Server running remotely. The feature can be specified by name or UID. Use the <code class="docutils literal notranslate"><span class="pre">show</span></code> command to see all available features. Depending on the feature, additional arguments (such as the text message to display) encoded as a single JSON string have to be specified. Please refer to the developer documentation for more information</p>
+</dd></dl>
+
+<dl class="describe">
+<dt class="sig sig-object">
+<span class="sig-name descname"><span class="pre">stop</span> <span class="pre">&lt;FEATURE&gt;</span> <span class="pre">&lt;HOST</span> <span class="pre">ADRESS&gt;</span></span></dt>
+<dd><p>Stops the specified feature on the specified host by connecting to the PRJ16 Server running remotely. The feature can be specified by name or UID. Use the <code class="docutils literal notranslate"><span class="pre">show</span></code> command to see all available features.</p>
+</dd></dl>
+
+</section>
+<section id="ldap">
+<h2>LDAP<a class="headerlink" href="#ldap" title="Link to this heading"></a></h2>
+<p>The commands available in the <code class="docutils literal notranslate"><span class="pre">ldap</span></code> module are documented in section <a class="reference internal" href="ldap.html#ldapcli"><span class="std std-ref">Command line interface</span></a> in chapter <a class="reference internal" href="ldap.html#ldap"><span class="std std-ref">LDAP/AD integration</span></a>.</p>
+</section>
+<section id="network-object-directory">
+<span id="clinetworkobjectdirectory"></span><h2>Network object directory<a class="headerlink" href="#network-object-directory" title="Link to this heading"></a></h2>
+<p>As described in the section <a class="reference internal" href="configuration.html#conflocationsandcomputers"><span class="std std-ref">Locations &amp; computers</span></a>, PRJ16 provides a built-in network object directory that can be used when no LDAP server is available. This network object directory can be managed in the PRJ16 Configurator as well as on the command line. Certain operations such as CSV import are currently only available on the command line. For most commands, a detailed description with examples is available in the command-specific help. The following commands can be used in the <code class="docutils literal notranslate"><span class="pre">networkobjects</span></code> module:</p>
+<dl class="describe">
+<dt class="sig sig-object">
+<span class="sig-name descname"><span class="pre">add</span> <span class="pre">&lt;TYPE&gt;</span> <span class="pre">&lt;NAME&gt;</span> <span class="pre">[&lt;HOST</span> <span class="pre">ADDRESS&gt;</span> <span class="pre">&lt;MAC</span> <span class="pre">ADDRESS&gt;</span> <span class="pre">&lt;PARENT&gt;]</span></span></dt>
+<dd><p>This command adds an object, where <code class="docutils literal notranslate"><span class="pre">&lt;TYPE&gt;</span></code> can be <code class="docutils literal notranslate"><span class="pre">location</span></code> or <code class="docutils literal notranslate"><span class="pre">computer</span></code>. <code class="docutils literal notranslate"><span class="pre">&lt;PARENT&gt;</span></code> can be specified as name or UUID.</p>
+</dd></dl>
+
+<dl class="describe">
+<dt class="sig sig-object">
+<span class="sig-name descname"><span class="pre">clear</span></span></dt>
+<dd><p>This command resets the entire network object directory, i.e. all locations and computers are removed. This operation is particularly useful before any automated import.</p>
+</dd></dl>
+
+<dl class="describe">
+<dt class="sig sig-object">
+<span class="sig-name descname"><span class="pre">dump</span></span></dt>
+<dd><p>This command outputs the complete network object directory as a flat table. Each property such as object UID, type or name is displayed as a separate column.</p>
+</dd></dl>
+
+<dl class="describe">
+<dt class="sig sig-object">
+<span class="sig-name descname"><span class="pre">export</span> <span class="pre">&lt;FILE&gt;</span> <span class="pre">[location</span> <span class="pre">&lt;LOCATION&gt;]</span> <span class="pre">[format</span> <span class="pre">&lt;FORMAT-STRING-WITH-VARIABLES&gt;]</span></span></dt>
+<dd><p>This command can be used to export either the complete network object directory or only the specified location to a text file. The formatting can be controlled via a format string containing placeholder variables. This allows generating CSV file easily. Valid variables are <code class="docutils literal notranslate"><span class="pre">%type%</span></code>, <code class="docutils literal notranslate"><span class="pre">%name%</span></code>, <code class="docutils literal notranslate"><span class="pre">%host%</span></code>, <code class="docutils literal notranslate"><span class="pre">%mac%</span></code> and <code class="docutils literal notranslate"><span class="pre">%location%</span></code>. Various examples are given in the command help (<code class="docutils literal notranslate"><span class="pre">PRJ16-cli</span> <span class="pre">networkobjects</span> <span class="pre">help</span> <span class="pre">export</span></code>).</p>
+</dd></dl>
+
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>When using this command in batch files or through scheduled tasks on Windows make sure to properly escape the percent sign, i.e. use <code class="docutils literal notranslate"><span class="pre">%%type%%</span></code> instead of <code class="docutils literal notranslate"><span class="pre">%type%</span></code>. Otherwise the individual parts of the format strings will be treated as environment variables and substituted with empty strings in most cases. This will lead to unexpected parse errors.</p>
+</div>
+<dl class="describe">
+<dt class="sig sig-object">
+<span class="sig-name descname"><span class="pre">import</span> <span class="pre">&lt;FILE&gt;</span> <span class="pre">[location</span> <span class="pre">&lt;LOCATION&gt;]</span> <span class="pre">[format</span> <span class="pre">&lt;FORMAT-STRING-WITH-VARIABLES&gt;]</span> <span class="pre">[regex</span> <span class="pre">&lt;REGULAR-EXPRESSION-WITH-VARIABLES&gt;]</span></span></dt>
+<dd><p>This command can be used to import a text file into the network object directory. The processing of the input data can be controlled via a format string or a regular expression containing placeholder variables. This way both CSV files and other types of structured data can be imported. Valid variables are <code class="docutils literal notranslate"><span class="pre">%type%</span></code>, <code class="docutils literal notranslate"><span class="pre">%name%</span></code>, <code class="docutils literal notranslate"><span class="pre">%host%</span></code>, <code class="docutils literal notranslate"><span class="pre">%mac%</span></code> and <code class="docutils literal notranslate"><span class="pre">%location%</span></code>. Various examples are given in the command help (<code class="docutils literal notranslate"><span class="pre">PRJ16-cli</span> <span class="pre">networkobjects</span> <span class="pre">help</span> <span class="pre">import</span></code>).</p>
+</dd></dl>
+
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>When using this command in batch files or through scheduled tasks on Windows make sure to properly escape the percent sign, i.e. use <code class="docutils literal notranslate"><span class="pre">%%type%%</span></code> instead of <code class="docutils literal notranslate"><span class="pre">%type%</span></code>. Otherwise the individual parts of the format strings will be treated as environment variables and substituted with empty strings in most cases. This will lead to unexpected parse errors.</p>
+</div>
+<dl class="describe">
+<dt class="sig sig-object">
+<span class="sig-name descname"><span class="pre">list</span></span></dt>
+<dd><p>This command prints the complete network object directory as a formatted list. Unlike the <code class="docutils literal notranslate"><span class="pre">dump</span></code> command, the hierarchy of locations and computers is represented by appropriate formatting.</p>
+</dd></dl>
+
+<dl class="describe">
+<dt class="sig sig-object">
+<span class="sig-name descname"><span class="pre">remove</span> <span class="pre">&lt;OBJECT&gt;</span></span></dt>
+<dd><p>This command removes the specified object from the directory. OBJECT can be specified by name or UUID. Removing a location will also remove all related computers.</p>
+</dd></dl>
+
+</section>
+<section id="power">
+<h2>Power<a class="headerlink" href="#power" title="Link to this heading"></a></h2>
+<p>The <code class="docutils literal notranslate"><span class="pre">power</span></code> module allows using power-related functions from the command line.</p>
+<dl class="describe">
+<dt class="sig sig-object">
+<span class="sig-name descname"><span class="pre">on</span> <span class="pre">&lt;MAC</span> <span class="pre">ADDRESS&gt;</span></span></dt>
+<dd><p>This command broadcasts a Wake-on-LAN (WOL) packet to the network in order to power on the computer with the given MAC address.</p>
+</dd></dl>
+
+</section>
+<section id="remote-access">
+<h2>Remote access<a class="headerlink" href="#remote-access" title="Link to this heading"></a></h2>
+<p>The <code class="docutils literal notranslate"><span class="pre">remoteaccess</span></code> module provides functions for a graphical remote access to computers. These are the same functions that can be accessed from the PRJ16 Master. The function provided by the command line tool can be used for example to create an program shortcut for direct access to a specific computer.</p>
+<dl class="describe">
+<dt class="sig sig-object">
+<span class="sig-name descname"><span class="pre">control</span></span></dt>
+<dd><p>This command opens a window with the remote control function that can be used to control a remote computer. The computer name or IP address (and optionally the TCP port) must be passed as an argument:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>PRJ16-cli remoteaccess control 192.168.1.2
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="describe">
+<dt class="sig sig-object">
+<span class="sig-name descname"><span class="pre">view</span></span></dt>
+<dd><p>This command opens a window with the remote view function to monitor a remote computer. In this mode the screen content is displayed in real time, but interaction with the computer is not possible until the corresponding button on the tool bar has been clicked. The computer or IP address (and optionally the TCP port) has to be passed as an argument:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>PRJ16-cli remoteaccess view pc5:5900
+</pre></div>
+</div>
+</dd></dl>
+
+</section>
+<section id="service-control">
+<h2>Service control<a class="headerlink" href="#service-control" title="Link to this heading"></a></h2>
+<p id="index-5">The <code class="docutils literal notranslate"><span class="pre">service</span></code> module can be used to control the local PRJ16 Service.</p>
+<dl class="describe">
+<dt class="sig sig-object">
+<span class="sig-name descname"><span class="pre">register</span></span></dt>
+<dd><p>This command registers the PRJ16 Service as a service in the operating system so that it is automatically started when the computer boots.</p>
+</dd></dl>
+
+<dl class="describe">
+<dt class="sig sig-object">
+<span class="sig-name descname"><span class="pre">unregister</span></span></dt>
+<dd><p>This command removes the service registration in the operating system so that the PRJ16 Service is no longer automatically started at boot time.</p>
+</dd></dl>
+
+<dl class="describe">
+<dt class="sig sig-object">
+<span class="sig-name descname"><span class="pre">start</span></span></dt>
+<dd><p>This command starts the PRJ16 Service.</p>
+</dd></dl>
+
+<dl class="describe">
+<dt class="sig sig-object">
+<span class="sig-name descname"><span class="pre">stop</span></span></dt>
+<dd><p>This command stops the PRJ16 Service.</p>
+</dd></dl>
+
+<dl class="describe">
+<dt class="sig sig-object">
+<span class="sig-name descname"><span class="pre">restart</span></span></dt>
+<dd><p>This command restarts the PRJ16 Service.</p>
+</dd></dl>
+
+<dl class="describe">
+<dt class="sig sig-object">
+<span class="sig-name descname"><span class="pre">status</span></span></dt>
+<dd><p>This command queries and displays the status of the PRJ16 Service.</p>
+</dd></dl>
+
+</section>
+<section id="shell">
+<h2>Shell<a class="headerlink" href="#shell" title="Link to this heading"></a></h2>
+<p>Simple shell functionalities are provided by the <code class="docutils literal notranslate"><span class="pre">shell</span></code> module. If this module is called without further arguments, an interactive mode is started. In this mode, all CLI commands can be entered directly without having to specify and call the <code class="docutils literal notranslate"><span class="pre">PRJ16-cli</span></code> program for each command. The mode can be left by entering the keyword <code class="docutils literal notranslate"><span class="pre">exit</span></code>.</p>
+<p>Furthermore the module can be used for automated processing of commands in a text file in order to implement simple batch processing:</p>
+<dl class="describe">
+<dt class="sig sig-object">
+<span class="sig-name descname"><span class="pre">run</span> <span class="pre">&lt;FILE&gt;</span></span></dt>
+<dd><p>This command executes the commands specified in the text file line by line. Operations are executed independently of the result of previous operations, i.e. an error does not lead to termination.</p>
+</dd></dl>
+
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="ldap.html" class="btn btn-neutral float-left" title="LDAP/AD integration" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="reference.html" class="btn btn-neutral float-right" title="Configuration reference" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2017-2025, PRJ16 Solutions.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
